@@ -1,0 +1,52 @@
+name: Check Superteam voor updates
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # elke 30 minuten, niet minuutnauwkeurig, dat hoeft ook niet
+  workflow_dispatch: {}       # handmatig starten via de Actions-tab
+
+permissions:
+  contents: write  # nodig om data.json terug te committen (state.json wordt nooit gecommit)
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # De tokens (state.json) leven ALLEEN hier, nooit in git en dus nooit
+      # zichtbaar via GitHub Pages. Elke run krijgt zijn eigen cache-sleutel
+      # met de vorige als fallback, zodat het altijd de laatste versie pakt.
+      - name: Tokens ophalen uit cache
+        uses: actions/cache/restore@v4
+        with:
+          path: state.json
+          key: superteam-state-${{ github.run_id }}
+          restore-keys: |
+            superteam-state-
+
+      - name: Check Superteam
+        env:
+          SUPERTEAM_SESSION_TOKEN: ${{ secrets.SUPERTEAM_SESSION_TOKEN }}
+          SUPERTEAM_REFRESH_TOKEN: ${{ secrets.SUPERTEAM_REFRESH_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: node check-superteam.js
+
+      - name: Tokens bewaren voor de volgende run
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: state.json
+          key: superteam-state-${{ github.run_id }}
+
+      - name: data.json publiceren
+        run: |
+          git config user.name "superteam-bot"
+          git config user.email "actions@github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "Update data.json"
+          git push
