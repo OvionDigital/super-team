@@ -5,10 +5,13 @@
  * Simons eigen twee teams automatisch bij in data.json (dat bestand
  * wordt gepubliceerd via GitHub Pages, dus alleen niet-gevoelige data).
  *
- * Benodigde omgevingsvariabelen (als GitHub Actions secrets):
- *   SUPERTEAM_SESSION_TOKEN   - eenmalig gekopieerd uit sessionStorage
+ * Benodigde omgevingsvariabele (als GitHub Actions secret):
  *   SUPERTEAM_REFRESH_TOKEN   - eenmalig gekopieerd uit localStorage (blijft ~5 jaar geldig)
  *   NTFY_TOPIC                - een zelfgekozen, geheime kanaalnaam voor ntfy.sh
+ *
+ * Verversen werkt met alleen het ververstoken, zonder sessietoken erbij
+ * nodig te hebben: een POST met het ververstoken als platte tekst-body
+ * naar /api/auth/refresh geeft een vers sessietoken én ververstoken terug.
  *
  * BELANGRIJK over state.json (de tokens): dat bestand wordt NIET naar
  * git gecommit, alleen bewaard via actions/cache tussen runs (zie de
@@ -28,10 +31,10 @@ const MY_LINEUPS = [
   { lineupId: 5486, naam: 'Prive' }
 ];
 
-async function refreshTokens(sessionToken, refreshToken) {
+async function refreshTokens(refreshToken) {
   const res = await fetch('https://api.super-team.nl/api/auth/refresh', {
     method: 'POST',
-    headers: { 'Authorization': 'Bearer ' + sessionToken, 'Content-Type': 'text/plain' },
+    headers: { 'Content-Type': 'text/plain' },
     body: refreshToken
   });
   if (!res.ok) throw new Error(`Token verversen mislukt (${res.status}): ${await res.text()}`);
@@ -69,7 +72,7 @@ async function notify(topic, title, message) {
 }
 
 async function main() {
-  const { SUPERTEAM_SESSION_TOKEN, SUPERTEAM_REFRESH_TOKEN, NTFY_TOPIC } = process.env;
+  const { SUPERTEAM_REFRESH_TOKEN, NTFY_TOPIC } = process.env;
   if (!NTFY_TOPIC) throw new Error('Ontbrekende omgevingsvariabele NTFY_TOPIC.');
 
   const fs = await import('fs/promises');
@@ -77,13 +80,12 @@ async function main() {
   let prevState = {};
   try { prevState = JSON.parse(await fs.readFile(STATE_FILE, 'utf-8')); } catch { /* eerste run */ }
 
-  const sessionTokenIn = prevState.sessionToken || SUPERTEAM_SESSION_TOKEN;
   const refreshTokenIn = prevState.refreshToken || SUPERTEAM_REFRESH_TOKEN;
-  if (!sessionTokenIn || !refreshTokenIn) {
-    throw new Error('Geen tokens beschikbaar: vul SUPERTEAM_SESSION_TOKEN en SUPERTEAM_REFRESH_TOKEN in als secrets voor de eerste run.');
+  if (!refreshTokenIn) {
+    throw new Error('Geen ververstoken beschikbaar: vul SUPERTEAM_REFRESH_TOKEN in als secret voor de eerste run.');
   }
 
-  const { sessionToken, refreshToken } = await refreshTokens(sessionTokenIn, refreshTokenIn);
+  const { sessionToken, refreshToken } = await refreshTokens(refreshTokenIn);
   const standings = await fetchStandings(sessionToken);
   const signature = summarize(standings);
 
