@@ -1,4 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='white' stroke='black' stroke-width='3'/%3E%3Cpolygon points='32,16 43,24 39,37 25,37 21,24' fill='black'/%3E%3Cline x1='32' y1='2' x2='32' y2='16' stroke='black' stroke-width='2.5'/%3E%3Cline x1='2' y1='32' x2='21' y2='24' stroke='black' stroke-width='2.5'/%3E%3Cline x1='9' y1='55' x2='25' y2='37' stroke='black' stroke-width='2.5'/%3E%3Cline x1='55' y1='55' x2='39' y2='37' stroke='black' stroke-width='2.5'/%3E%3Cline x1='62' y1='32' x2='43' y2='24' stroke='black' stroke-width='2.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..700&display=swap" rel="stylesheet">
@@ -537,16 +538,53 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
   ::-webkit-scrollbar-thumb:hover{background:var(--muted)}
   html{scrollbar-color:var(--line) transparent;scrollbar-width:thin}
 
-  .nav{display:flex;gap:0;background:var(--glass);backdrop-filter:blur(14px) saturate(160%);
-    -webkit-backdrop-filter:blur(14px) saturate(160%);border-bottom:1px solid var(--glassBorder);padding:0 14px;
-    position:sticky;top:0;z-index:30;box-shadow:0 8px 24px -18px rgba(15,23,32,.35)}
-  .nav button{padding:14px 18px;color:var(--muted);font-stretch:94%;border-bottom:3px solid transparent;margin-bottom:-1px}
-  .nav button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
-  .nav .theme{margin-left:auto;border:1px solid var(--line);border-radius:7px;padding:7px 12px;
-    align-self:center;display:inline-flex;align-items:center;gap:8px;font-size:15px;font-stretch:94%}
-  .nav .theme[aria-pressed="true"]{border-bottom-color:var(--line)}
+  .appLayout{display:flex;min-height:100vh}
+  .brand{display:flex;align-items:center;gap:9px;padding:6px 10px 20px;font-weight:700;font-size:17px;font-stretch:92%}
+  .brand svg{width:23px;height:23px;flex:0 0 auto}
+  .nav{display:flex;flex-direction:column;gap:3px;background:var(--glass);backdrop-filter:blur(14px) saturate(160%);
+    -webkit-backdrop-filter:blur(14px) saturate(160%);border-right:1px solid var(--glassBorder);padding:16px 11px;
+    position:sticky;top:0;align-self:flex-start;height:100vh;width:214px;flex:0 0 auto;z-index:30;
+    box-shadow:10px 0 24px -20px rgba(15,23,32,.35);overflow-y:auto}
+  .nav button{padding:10px 12px;color:var(--muted);font-stretch:94%;border-radius:8px;
+    display:flex;align-items:center;gap:10px;text-align:left;font-size:15px}
+  .nav button svg{width:18px;height:18px;flex:0 0 auto;opacity:.75}
+  .nav button[aria-pressed="true"]{color:var(--ink);background:var(--selbg);font-weight:600}
+  .nav button[aria-pressed="true"] svg{opacity:1;color:var(--accent)}
+  .nav button:not(.theme):hover{color:var(--ink);background:var(--focus)}
+  .nav .theme{margin:auto 2px 0;border:1px solid var(--line);border-radius:7px;padding:9px 12px;
+    justify-content:center;font-size:14px;font-stretch:94%}
   .nav .theme:hover{color:var(--ink);border-color:var(--muted)}
-  .nav .theme svg{width:17px;height:17px}
+  .nav .theme svg{width:17px;height:17px;opacity:1}
+  .mainArea{flex:1 1 auto;min-width:0}
+
+  .dashGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;padding:16px}
+  .dwidget{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 17px;
+    box-shadow:0 1px 2px rgba(15,23,32,.05),0 14px 32px -22px rgba(15,23,32,.28);animation:rowIn .25s ease both}
+  [data-theme="dark"] .dwidget{box-shadow:0 1px 2px rgba(0,0,0,.35),0 14px 32px -22px rgba(0,0,0,.55)}
+  .dwidget h3{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;
+    letter-spacing:.05em;font-stretch:88%}
+  .dwidget .big{font-size:27px;font-weight:700;font-stretch:90%;line-height:1.2;
+    background:linear-gradient(135deg,var(--ink),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .dwidget .sub{font-size:14px;color:var(--muted);margin-top:2px}
+  .dwidget .rows{display:flex;flex-direction:column;gap:8px;margin-top:2px}
+  .dwidget .row2{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14.5px}
+  .dwidget .row2 span:first-child{display:flex;align-items:center;gap:7px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .dwidget .row2 b{font-weight:600;font-stretch:94%;flex:0 0 auto}
+  .dwidget.wide{grid-column:span 2}
+  .dwidget .shortcut{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;
+    border:1px solid var(--line);border-radius:8px;font-size:14.5px;color:var(--ink);text-align:left}
+  .dwidget .shortcut:hover{border-color:var(--muted);background:var(--focus)}
+  .dwidget .shortcut svg{width:15px;height:15px;opacity:.6;flex:0 0 auto}
+  @media(max-width:640px){.dwidget.wide{grid-column:span 1}}
+  @media(max-width:1180px){
+    .appLayout{flex-direction:column}
+    .nav{flex-direction:row;align-items:center;position:static;height:auto;width:auto;padding:8px 10px;
+      overflow-x:auto;overflow-y:visible;box-shadow:0 8px 24px -18px rgba(15,23,32,.35);border-right:none;
+      border-bottom:1px solid var(--glassBorder)}
+    .brand{padding:4px 10px;flex:0 0 auto}
+    .nav button{padding:9px 12px;white-space:nowrap;flex:0 0 auto}
+    .nav .theme{margin:0 0 0 auto}
+  }
 
   .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;padding:14px;align-items:start}
   @media(max-width:1180px){.wrap{grid-template-columns:1fr;padding:10px;gap:10px}
@@ -803,19 +841,89 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
     font:inherit;font-size:14px;background:var(--paper);resize:vertical}
 </style>
 
-<nav class="nav" role="group" aria-label="Weergave">
-  <button id="navBuild" aria-pressed="true">Team bouwen</button>
-  <button id="navXp" aria-pressed="false">Verwachte punten</button>
-  <button id="navBest" aria-pressed="false">Beste opstellingen</button>
-  <button id="navPop" aria-pressed="false">Populariteit</button>
-  <button id="navActual" aria-pressed="false">Werkelijke punten</button>
+<div class="appLayout">
+<nav class="nav" role="navigation" aria-label="Weergave">
+  <div class="brand">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3.5"/>
+      <polygon points="32,17 42,24.5 38.5,36 25.5,36 22,24.5" fill="currentColor"/>
+      <line x1="32" y1="4" x2="32" y2="17" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="6" y1="32" x2="22" y2="24.5" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="14" y1="53" x2="25.5" y2="36" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="50" y1="53" x2="38.5" y2="36" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="58" y1="32" x2="42" y2="24.5" stroke="currentColor" stroke-width="2.5"/></svg>
+    <span>Superteam</span>
+  </div>
+  <button id="navDash" aria-pressed="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1.5"/><rect x="13" y="3.5" width="7.5" height="4.5" rx="1.5"/>
+      <rect x="13" y="10.5" width="7.5" height="10" rx="1.5"/><rect x="3.5" y="13.5" width="7.5" height="7" rx="1.5"/></svg>
+    Dashboard</button>
+  <button id="navBuild" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M8 4 4 7v3h3v10h10V10h3V7l-4-3-3 3h-2z"/></svg>
+    Team bouwen</button>
+  <button id="navXp" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 19V10M11 19V5M18 19v-6"/><path d="M3 19h18"/></svg>
+    Verwachte punten</button>
+  <button id="navBest" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/>
+      <path d="M12 13v3M9 20h6M10 16.5h4v3.5h-4z"/></svg>
+    Beste opstellingen</button>
+  <button id="navPop" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 21c4-2.5 7-5.8 7-10a7 7 0 0 0-14 0c0 4.2 3 7.5 7 10Z"/><circle cx="12" cy="11" r="2.4"/></svg>
+    Populariteit</button>
+  <button id="navActual" aria-pressed="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/><path d="m8.3 12.3 2.6 2.6 4.8-5.4"/></svg>
+    Werkelijke punten</button>
   <button id="themeBtn" class="theme" title="Wissel tussen licht en donker" aria-pressed="false">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
       <circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"/></svg>
     <span id="themeTxt">Donker</span></button>
 </nav>
 
-<div class="view" id="viewBuild">
+<main class="mainArea">
+<div class="view" id="viewDash">
+  <div class="dashGrid">
+    <div class="dwidget">
+      <h3>Actieve opstelling</h3>
+      <div class="big" id="dwTeamName">–</div>
+      <div class="sub" id="dwTeamBudget">–</div>
+    </div>
+    <div class="dwidget">
+      <h3>Verwachte punten</h3>
+      <div class="big" id="dwXp">–</div>
+      <div class="sub">voor je actieve opstelling</div>
+    </div>
+    <div class="dwidget">
+      <h3>Mijn positie</h3>
+      <div class="big" id="dwRank">–</div>
+      <div class="sub" id="dwRankSub">nog geen stand geïmporteerd</div>
+    </div>
+    <div class="dwidget">
+      <h3>Cijfers werkelijke punten</h3>
+      <div class="big" id="dwCoverage">–</div>
+      <div class="sub" id="dwCoverageSub">spelers met cijfers</div>
+    </div>
+    <div class="dwidget wide">
+      <h3>Topscorers tot nu toe</h3>
+      <div class="rows" id="dwTopScorers"></div>
+    </div>
+    <div class="dwidget wide">
+      <h3>Populairste spelers</h3>
+      <div class="rows" id="dwTopOwned"></div>
+    </div>
+    <div class="dwidget wide">
+      <h3>Snel verder</h3>
+      <div class="rows" id="dwShortcuts"></div>
+    </div>
+  </div>
+</div>
+
+<div class="view" id="viewBuild" hidden>
 <div class="tabs" role="group">
   <button id="tabPool" aria-pressed="true">Spelers</button>
   <button id="tabSquad" aria-pressed="false">Mijn elftal</button>
@@ -1071,6 +1179,8 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
       <div id="histChart" style="padding:0 15px 15px"></div>
     </section>
   </div>
+</div>
+</main>
 </div>
 
 <dialog id="dlg"><div class="db">
@@ -1766,6 +1876,53 @@ document.getElementById('noteDlgDel').onclick=()=>{
 };
 document.getElementById('noteDlgCancel').onclick=()=>noteDlg.close();
 
+/* ---------- dashboard ---------- */
+function renderDashboard(){
+  const t=cur();
+  document.getElementById('dwTeamName').textContent=t?t.naam:'–';
+  document.getElementById('dwTeamBudget').textContent=t?`€${spent()} van €${BUDGET} besteed`:'nog geen opstelling';
+  document.getElementById('dwXp').textContent=t?fmt1(teamXp(t)):'–';
+
+  const hist=(S.history||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  const last=hist[hist.length-1];
+  if(last&&last.teams&&last.teams.length){
+    const best=last.teams.reduce((a,b)=>(+a.rank||9e9)<(+b.rank||9e9)?a:b);
+    document.getElementById('dwRank').textContent='#'+esc(best.rank);
+    const rest=last.teams.map(x=>`${esc(x.naam||'Team '+x.lineupId)}: #${esc(x.rank)} · ${esc(x.punten)} pt`).join(' · ');
+    document.getElementById('dwRankSub').textContent=`${rest} (${last.asOf||''})`;
+  }else{
+    document.getElementById('dwRank').textContent='–';
+    document.getElementById('dwRankSub').textContent='nog geen stand geïmporteerd';
+  }
+
+  const withActual=Object.keys((S.actual&&S.actual.players)||{}).length;
+  document.getElementById('dwCoverage').textContent=withActual+' / '+PLAYERS.length;
+  document.getElementById('dwCoverageSub').textContent=S.actual&&S.actual.asOf?S.actual.asOf:'nog niet geïmporteerd';
+
+  const topScorers=PLAYERS.map(p=>({p,v:actualOf(p)})).filter(x=>x.v!==null&&x.v>0)
+    .sort((a,b)=>b.v-a.v).slice(0,5);
+  document.getElementById('dwTopScorers').innerHTML=topScorers.length?topScorers.map(x=>
+    `<div class="row2"><span>${shirt(x.p.club)}${esc(x.p.naam)}</span><b>${fmt1(x.v)} pt</b></div>`).join('')
+    :'<p class="empty" style="padding:6px 0">Nog geen werkelijke punten geïmporteerd.</p>';
+
+  const own=S.ownership||{};
+  const topOwned=Object.entries(own.players||{}).map(([id,cnt])=>({p:byId(id),cnt}))
+    .filter(x=>x.p).sort((a,b)=>b.cnt-a.cnt).slice(0,5);
+  document.getElementById('dwTopOwned').innerHTML=topOwned.length?topOwned.map(x=>
+    `<div class="row2"><span>${shirt(x.p.club)}${esc(x.p.naam)}</span><b>${own.totalTeams?fmt1(x.cnt/own.totalTeams*100)+'%':x.cnt}</b></div>`).join('')
+    :'<p class="empty" style="padding:6px 0">Nog geen populariteit geïmporteerd.</p>';
+
+  document.getElementById('dwShortcuts').innerHTML=`
+    <button class="shortcut" data-goto="best">Beste opstelling bekijken
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    <button class="shortcut" data-goto="pop">Populariteit bekijken
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    <button class="shortcut" data-goto="actual">Werkelijke punten bekijken
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>`;
+  document.getElementById('dwShortcuts').querySelectorAll('[data-goto]').forEach(b=>
+    b.onclick=()=>nav(b.dataset.goto));
+}
+
 /* ---------- populariteit ---------- */
 function popFiltered(){
   let r=PLAYERS.filter(p=>{
@@ -2179,26 +2336,30 @@ document.getElementById('themeBtn').onclick=()=>{
   S.theme=S.theme==='dark'?'light':'dark';applyTheme();save();};
 
 /* ---------- navigatie ---------- */
-const nb=document.getElementById('navBuild'),nx=document.getElementById('navXp'),
+const nd=document.getElementById('navDash'),nb=document.getElementById('navBuild'),nx=document.getElementById('navXp'),
       nbe=document.getElementById('navBest'),nbp=document.getElementById('navPop'),
       nba=document.getElementById('navActual');
 function nav(v){
+  document.getElementById('viewDash').hidden=v!=='dash';
   document.getElementById('viewBuild').hidden=v!=='build';
   document.getElementById('viewXp').hidden=v!=='xp';
   document.getElementById('viewBest').hidden=v!=='best';
   document.getElementById('viewPop').hidden=v!=='pop';
   document.getElementById('viewActual').hidden=v!=='actual';
+  nd.setAttribute('aria-pressed',v==='dash');
   nb.setAttribute('aria-pressed',v==='build');
   nx.setAttribute('aria-pressed',v==='xp');
   nbe.setAttribute('aria-pressed',v==='best');
   nbp.setAttribute('aria-pressed',v==='pop');
   nba.setAttribute('aria-pressed',v==='actual');
-  if(v==='build')render();
+  if(v==='dash')renderDashboard();
+  else if(v==='build')render();
   else if(v==='xp'){renderClubCards();renderXHead();renderXList();}
   else if(v==='best')renderForce();
   else if(v==='pop'){renderPop();renderPopClubs();}
   else{renderActList();renderHistory();}
 }
+nd.onclick=()=>nav('dash');
 nb.onclick=()=>nav('build');nx.onclick=()=>nav('xp');nbe.onclick=()=>nav('best');nbp.onclick=()=>nav('pop');nba.onclick=()=>nav('actual');
 document.getElementById('bMk').addEventListener('click',e=>{
   const b=e.target.closest('[data-bmk]');if(!b)return;
@@ -2244,10 +2405,11 @@ async function loadCloudData(){
     if(d.ownership)S.ownership=d.ownership;
     if(d.actual)S.actual=d.actual;
     if(Array.isArray(d.history))S.history=d.history;
+    if(d.updatedAt)S.dataUpdatedAt=d.updatedAt;
   }catch(e){ /* lokaal geopend zonder data.json, of geen netwerk: stil negeren */ }
 }
 (async()=>{await load();await loadCloudData();
   if(!S.theme)S.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
   applyTheme();render();renderClubCards();renderXHead();renderXList();renderPop();renderPopClubs();
-  renderActList();renderHistory();fit();})();
+  renderActList();renderHistory();renderDashboard();fit();})();
 </script>
