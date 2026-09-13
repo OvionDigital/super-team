@@ -1,271 +1,272 @@
 {
   "ownership": {
-    "asOf": "tot en met ronde 6",
-    "totalTeams": 349,
-    "totalSlots": 3839,
+    "asOf": "tot en met ronde 6 (bijgewerkt)",
+    "totalTeams": 353,
+    "totalSlots": 3883,
     "players": {
-      "Feyenoord|Gjivai Zechiel": 195,
-      "Telstar|Ronald Jr. Koeman": 160,
-      "FC Twente|Bart van Rooij": 151,
-      "PSV|Guus Til": 129,
-      "Fortuna|Mohamed Ihattaren": 128,
-      "Groningen|Thom van Bergen": 127,
-      "NEC|Tjaronn Chery": 116,
-      "AZ|Ro-Zangelo Daal": 109,
-      "Ajax|Tolu Arokodare": 100,
-      "Excelsior|Jan Plug": 96,
-      "PSV|Ruben van Bommel": 91,
-      "Go Ahead|Soren Tengstedt": 84,
-      "AZ|Mateo Chavez": 79,
-      "Go Ahead|Julius Dirksen": 70,
-      "Feyenoord|Luciano Valente": 70,
-      "Go Ahead|Mathis Suray": 68,
-      "Ajax|Davy Klaassen": 62,
-      "PEC|Simon Graves": 60,
-      "PSV|Sergino Dest": 57,
-      "Cambuur|Rafik El Arguioui": 57,
-      "AZ|Mexx Meerdink": 55,
-      "FC Twente|Ruud Nijstad": 53,
-      "Ajax|Julian Brandt": 52,
-      "Sparta|Marvin Young": 51,
-      "Excelsior|Simon Janssen": 49,
-      "Groningen|Thijmen Blokzijl": 42,
-      "Excelsior|Stijn van Gassel": 41,
-      "Fortuna|Mattijs Branderhorst": 39,
-      "Sparta|Milan Zonneveld": 35,
-      "Fortuna|Lequincio Zeefuik": 33,
-      "Feyenoord|Anis Hadj Moussa": 33,
-      "PEC|Sherel Floranus": 31,
-      "FC Utrecht|Artem Stepanov": 31,
-      "AZ|Lewis Schouten": 30,
-      "NEC|Darko Nejasmic": 28,
-      "ADO|Kilian Nikiema": 28,
-      "Ajax|Youri Baas": 27,
-      "Ajax|Anton Gaaei": 27,
-      "NEC|Perr Schuurs": 26,
-      "Excelsior|Irakli Yegoian": 26,
-      "PEC|Olivier Aertssen": 24,
-      "AZ|Elijah Dijkstra": 24,
-      "PEC|Koen Kostons": 24,
-      "SC Heerenveen|Maas Willemsen": 23,
-      "FC Twente|Robin Propper": 22,
-      "Groningen|David van der Werff": 21,
-      "Telstar|Abdelnour Soualhia": 21,
-      "FC Twente|Wout Weghorst": 20,
-      "SC Heerenveen|Ringo Meerveld": 20,
-      "PSV|Ricardo Pepi": 20,
-      "Go Ahead|Victor Edvardsen": 20,
-      "Willem II|Nathan Tjoe-A-On": 19,
-      "Go Ahead|Kjetil Haug": 19,
-      "ADO|Othniel Raterink": 19,
-      "PEC|Nick Viergever": 18,
-      "SC Heerenveen|Oliver Braude": 18,
-      "NEC|Tobias Storm": 18,
-      "FC Utrecht|Dani de Wit": 17,
-      "FC Twente|Ramiz Zerrouki": 17,
-      "Excelsior|David Garden": 17,
-      "PSV|Lutsharel Geertruida": 16,
-      "PSV|Ivan Perisic": 16,
-      "Feyenoord|Jeremiah St. Juste": 15,
-      "SC Heerenveen|Dylan Vente": 15,
-      "FC Utrecht|Matisse Didden": 15,
-      "SC Heerenveen|Vasilios Zagaritis": 14,
-      "Ajax|Caio Henrique": 14,
-      "Sparta|Bas Kuipers": 13,
-      "SC Heerenveen|Jacob Trenskow": 12,
-      "Fortuna|Shiloh 't Zand": 11,
-      "Willem II|Hidde ter Avest": 10,
-      "FC Twente|Lars Unnerstall": 10,
-      "Go Ahead|Dean James": 10,
-      "Excelsior|Casper Widell": 10,
-      "FC Twente|Daouda Weidmann": 10,
-      "Willem II|Finn Stam": 10,
-      "Telstar|Marvin Peersman": 9,
-      "ADO|Sekou Sylla": 9,
-      "Excelsior|Noah Naujoks": 9,
-      "Fortuna|Nick de Groot": 9,
-      "Ajax|Steven Berghuis": 8,
-      "Fortuna|Ivo Pinto": 8,
-      "AZ|Dave Kwakman": 8,
-      "Groningen|Brynjolfur Andersen Willumsson": 8,
-      "AZ|Jari de Busser": 8,
-      "NEC|Deveron Fonville": 8,
-      "NEC|Philippe Sandler": 7,
-      "Go Ahead|Joris Kramer": 7,
-      "FC Twente|Max Bruns": 7,
-      "AZ|Peer Koopmeiners": 7,
-      "Feyenoord|Givairo Read": 7,
-      "NEC|Gonzalo Crettaz": 7,
-      "FC Twente|Marko Pjaca": 7,
-      "Ajax|Abdellah Ouazane": 7,
-      "Ajax|Daley Blind": 6,
-      "Sparta|Michael Brouwer": 6,
-      "PSV|Mauro Junior": 6,
-      "SC Heerenveen|Sam Kersten": 6,
-      "Fortuna|Jasper Dahlhaus": 6,
-      "SC Heerenveen|Mees Hilgers": 6,
-      "Groningen|Tygo Land": 6,
-      "NEC|Adam Tahaui": 6,
-      "ADO|Milan Hokke": 6,
-      "ADO|Evan Rottier": 6,
-      "Excelsior|Eric da Silva Moreira": 6,
-      "FC Utrecht|Siebe Horemans": 5,
-      "PEC|Jasper Schendelaar": 5,
-      "Sparta|Julian Baas": 5,
-      "Cambuur|Thijs Jansen": 5,
-      "Sparta|Isaac Babadi": 5,
-      "FC Twente|Sondre Orjasaeter": 5,
-      "NEC|Noe Lebreton": 5,
-      "Ajax|Marc ter Stegen": 5,
-      "Telstar|Sem Valk": 5,
-      "Sparta|Bruno Martins Indi": 4,
-      "NEC|Bram Nuytinck": 4,
-      "NEC|Bryan Linssen": 4,
-      "Feyenoord|Sem Steijn": 4,
-      "FC Utrecht|Arthur Zagre": 4,
-      "PEC|Damian van der Haar": 4,
-      "FC Utrecht|Niklas Vesterlund": 4,
-      "AZ|Kees Smit": 4,
-      "Willem II|Devin Haen": 4,
-      "SC Heerenveen|Bernt Klaverboer": 4,
-      "Willem II|Uriel van Aalst": 4,
-      "Fortuna|Justin Hubner": 4,
-      "Sparta|Nick Verschuren": 4,
-      "Feyenoord|Nacho Ferri": 4,
-      "Ajax|Marcos Leonardo": 4,
-      "Groningen|Elvis van der Laan": 4,
-      "Sparta|Mitchell van Bergen": 3,
-      "NEC|Kaj Sierhuis": 3,
-      "Groningen|Etienne Vaessen": 3,
-      "PSV|Sven Mijnans": 3,
-      "FC Twente|Daan Rots": 3,
-      "PEC|Thijs Oosting": 3,
-      "AZ|Mees de Wit": 3,
-      "Excelsior|Rick Meissen": 3,
-      "PEC|Ibrahim Cissoko": 3,
-      "AZ|Wouter Goes": 3,
-      "FC Utrecht|Yoann Cathline": 3,
-      "FC Twente|Kristian Hlynsson": 3,
-      "Groningen|Wouter Prins": 3,
-      "Ajax|Oscar Gloukh": 3,
-      "Feyenoord|Shaqueel van Persie": 3,
-      "Ajax|Thilo Kehrer": 3,
       "Sparta|Jens Toornstra": 2,
+      "NEC|Tjaronn Chery": 116,
+      "Ajax|Daley Blind": 6,
+      "PEC|Nick Viergever": 18,
       "AZ|Jordy Clasie": 2,
-      "ADO|Daryl van Mieghem": 2,
-      "Sparta|Filip Bednarek": 2,
-      "Telstar|Jeff Hardeveld": 2,
-      "AZ|Calvin Stengs": 2,
-      "Groningen|Marco Rente": 2,
-      "Cambuur|Jamal Amofa": 2,
-      "FC Utrecht|Davy van den Berg": 2,
-      "FC Utrecht|Vasilios Barkas": 2,
-      "Groningen|Jorg Schreuders": 2,
-      "FC Twente|Younes Taha": 2,
-      "Excelsior|Lennard Hartjes": 2,
-      "Telstar|Nils Rossen": 2,
-      "SC Heerenveen|Mats Egbring": 2,
-      "PSV|Esmir Bajraktarevic": 2,
-      "Telstar|Gerald Alders": 2,
-      "Ajax|Jorthy Mokio": 2,
-      "Feyenoord|Oussama Targhalline": 2,
-      "Willem II|Jaden Slory": 2,
-      "Feyenoord|Tsuyoshi Watanabe": 2,
-      "PSV|Noah Fernandez": 2,
-      "Go Ahead|Stefan Sigurdarson": 2,
-      "Feyenoord|Mika Marmol": 2,
-      "Fortuna|Siebe Wylin": 2,
-      "ADO|Pascal Mulder": 2,
-      "ADO|Nigel Thomas": 2,
-      "NEC|Clement Bischoff": 2,
-      "Cambuur|Ismael Baouf": 2,
-      "NEC|Almugera Kabar": 2,
-      "Ajax|Viktor Tsygankov": 2,
-      "Ajax|Simon Adingra": 2,
       "NEC|Dusan Tadic": 1,
+      "Sparta|Bruno Martins Indi": 4,
       "FC Twente|Remko Pasveer": 1,
+      "NEC|Bram Nuytinck": 4,
+      "Ajax|Steven Berghuis": 8,
+      "NEC|Bryan Linssen": 4,
+      "ADO|Daryl van Mieghem": 2,
+      "Fortuna|Mattijs Branderhorst": 40,
+      "Ajax|Davy Klaassen": 62,
       "PEC|Ryan Thomas": 1,
       "AZ|Wesley Hoedt": 1,
+      "FC Twente|Wout Weghorst": 20,
+      "Telstar|Marvin Peersman": 9,
+      "Sparta|Filip Bednarek": 2,
+      "Sparta|Bas Kuipers": 13,
+      "FC Twente|Robin Propper": 22,
+      "Telstar|Jeff Hardeveld": 2,
       "Ajax|Sofyan Amrabat": 1,
       "Fortuna|Kristoffer Peterson": 1,
       "Feyenoord|Bart Nieuwkoop": 1,
-      "NEC|Jamiro Monteiro": 1,
+      "Willem II|Hidde ter Avest": 10,
+      "Sparta|Michael Brouwer": 6,
+      "Feyenoord|Jeremiah St. Juste": 16,
+      "NEC|Jamiro Monteiro": 2,
+      "Sparta|Mitchell van Bergen": 3,
       "Groningen|Oskar Zawada": 1,
       "Willem II|Justin Hoogma": 1,
+      "NEC|Philippe Sandler": 7,
+      "PEC|Sherel Floranus": 31,
+      "PSV|Guus Til": 131,
+      "AZ|Calvin Stengs": 2,
+      "PSV|Mauro Junior": 6,
+      "FC Twente|Lars Unnerstall": 12,
+      "PEC|Odysseus Velanas": 1,
+      "SC Heerenveen|Dylan Vente": 15,
+      "FC Utrecht|Dani de Wit": 17,
       "PSV|Armando Obispo": 1,
       "Go Ahead|Evert Linthorst": 1,
+      "NEC|Perr Schuurs": 27,
       "Willem II|Alessandro Ciranni": 1,
+      "NEC|Kaj Sierhuis": 3,
+      "FC Utrecht|Siebe Horemans": 5,
       "AZ|Jizz Hornkamp": 1,
+      "Excelsior|Simon Janssen": 49,
+      "Feyenoord|Sem Steijn": 4,
+      "PSV|Lutsharel Geertruida": 17,
+      "Fortuna|Mohamed Ihattaren": 130,
+      "SC Heerenveen|Sam Kersten": 6,
+      "Groningen|Etienne Vaessen": 3,
       "Go Ahead|Melle Meulensteen": 1,
+      "PEC|Jasper Schendelaar": 5,
+      "PSV|Sergino Dest": 57,
+      "Go Ahead|Joris Kramer": 7,
+      "Groningen|Marco Rente": 2,
+      "Fortuna|Jasper Dahlhaus": 6,
+      "FC Twente|Ramiz Zerrouki": 17,
+      "Cambuur|Jamal Amofa": 2,
+      "PSV|Sven Mijnans": 3,
       "Fortuna|Ole Romeny": 1,
+      "SC Heerenveen|Mees Hilgers": 6,
+      "FC Twente|Daan Rots": 3,
+      "PEC|Thijs Oosting": 3,
+      "FC Twente|Max Bruns": 7,
       "Cambuur|Jorn Berkhout": 1,
+      "AZ|Peer Koopmeiners": 7,
+      "FC Utrecht|Arthur Zagre": 5,
+      "FC Twente|Bart van Rooij": 152,
       "SC Heerenveen|Dirk Proper": 1,
       "Go Ahead|Gerrit Nauber": 1,
+      "AZ|Mees de Wit": 3,
       "Fortuna|Rodrigo Guth": 1,
+      "Fortuna|Ivo Pinto": 8,
+      "FC Utrecht|Davy van den Berg": 2,
       "Feyenoord|Reiss Nelson": 1,
+      "SC Heerenveen|Ringo Meerveld": 21,
       "Telstar|Gabi Caschili": 1,
+      "ADO|Sekou Sylla": 9,
+      "Excelsior|Rick Meissen": 3,
+      "PEC|Ibrahim Cissoko": 3,
+      "FC Utrecht|Vasilios Barkas": 2,
+      "Excelsior|Stijn van Gassel": 41,
+      "Willem II|Nathan Tjoe-A-On": 19,
+      "Sparta|Julian Baas": 5,
+      "Go Ahead|Julius Dirksen": 71,
+      "Go Ahead|Dean James": 10,
       "Willem II|Calvin Twigt": 1,
+      "Fortuna|Lequincio Zeefuik": 33,
+      "Cambuur|Thijs Jansen": 5,
       "NEC|Ahmetcan Kaplan": 1,
       "Telstar|Patrick Brouwer": 1,
+      "PSV|Ricardo Pepi": 20,
+      "Feyenoord|Luciano Valente": 70,
+      "Ajax|Youri Baas": 27,
+      "Excelsior|Noah Naujoks": 9,
+      "Groningen|Thijmen Blokzijl": 43,
+      "Groningen|Thom van Bergen": 128,
+      "AZ|Wouter Goes": 3,
+      "Feyenoord|Givairo Read": 7,
+      "AZ|Mexx Meerdink": 55,
+      "Groningen|Jorg Schreuders": 2,
       "Cambuur|Billy van Duijl": 1,
+      "AZ|Lewis Schouten": 31,
+      "PSV|Ruben van Bommel": 92,
+      "Excelsior|Irakli Yegoian": 26,
+      "FC Twente|Younes Taha": 2,
+      "Go Ahead|Victor Edvardsen": 21,
       "PEC|Tijs Velthuis": 1,
       "AZ|Denso Kasius": 1,
+      "Excelsior|Lennard Hartjes": 2,
+      "Excelsior|Casper Widell": 11,
+      "Sparta|Isaac Babadi": 5,
+      "Groningen|Tygo Land": 6,
       "PSV|Kodai Sano": 1,
+      "Ajax|Anton Gaaei": 27,
+      "FC Utrecht|Yoann Cathline": 3,
+      "FC Twente|Daouda Weidmann": 10,
+      "Feyenoord|Gjivai Zechiel": 196,
+      "Telstar|Nils Rossen": 2,
+      "AZ|Dave Kwakman": 8,
+      "SC Heerenveen|Oliver Braude": 19,
+      "FC Twente|Kristian Hlynsson": 3,
+      "SC Heerenveen|Mats Egbring": 2,
       "Go Ahead|Giovanni van Zwam": 1,
+      "PEC|Damian van der Haar": 4,
       "Sparta|Shunsuke Mito": 1,
+      "Go Ahead|Soren Tengstedt": 84,
+      "FC Utrecht|Niklas Vesterlund": 5,
+      "Feyenoord|Anis Hadj Moussa": 34,
+      "Willem II|Finn Stam": 10,
       "Sparta|Mohamed Oukhattou": 1,
+      "AZ|Kees Smit": 4,
+      "FC Utrecht|Matisse Didden": 15,
+      "Go Ahead|Mathis Suray": 70,
       "PEC|Dylan Ruward": 1,
+      "Fortuna|Shiloh 't Zand": 11,
+      "SC Heerenveen|Vasilios Zagaritis": 14,
+      "Groningen|Brynjolfur Andersen Willumsson": 8,
+      "Willem II|Devin Haen": 4,
+      "Groningen|Wouter Prins": 3,
       "Groningen|Tika de Jonge": 1,
       "Fortuna|Baran Yilmaz": 1,
+      "SC Heerenveen|Bernt Klaverboer": 4,
+      "SC Heerenveen|Jacob Trenskow": 12,
       "Willem II|Jens Mathijsen": 1,
       "FC Twente|Aske Adelgaard": 1,
+      "AZ|Jari de Busser": 8,
+      "PEC|Simon Graves": 60,
+      "PEC|Olivier Aertssen": 24,
       "AZ|Ayoub Oufkir": 1,
       "PSV|Adamo Nagalo": 1,
+      "Sparta|Marvin Young": 51,
+      "PSV|Ivan Perisic": 16,
       "Fortuna|Edouard Michut": 1,
+      "AZ|Ro-Zangelo Daal": 111,
+      "Groningen|David van der Werff": 22,
+      "PSV|Esmir Bajraktarevic": 2,
+      "Telstar|Gerald Alders": 2,
       "Ajax|Lucas Rosa": 1,
+      "Ajax|Jorthy Mokio": 2,
+      "Feyenoord|Oussama Targhalline": 2,
       "Excelsior|Aymen Sliti": 1,
+      "AZ|Elijah Dijkstra": 24,
+      "Excelsior|Jan Plug": 98,
+      "Willem II|Uriel van Aalst": 4,
       "Willem II|Per van Loon": 1,
+      "AZ|Mateo Chavez": 80,
+      "Sparta|Milan Zonneveld": 35,
+      "SC Heerenveen|Maas Willemsen": 23,
+      "NEC|Gonzalo Crettaz": 7,
       "PSV|Matej Kovar": 1,
+      "PEC|Koen Kostons": 24,
+      "Willem II|Jaden Slory": 2,
+      "Telstar|Ronald Jr. Koeman": 161,
+      "Feyenoord|Tsuyoshi Watanabe": 2,
+      "Fortuna|Justin Hubner": 4,
+      "Ajax|Oscar Gloukh": 4,
       "NEC|Sam de Laat": 1,
+      "Sparta|Nick Verschuren": 4,
+      "FC Twente|Sondre Orjasaeter": 5,
+      "NEC|Noe Lebreton": 5,
+      "NEC|Darko Nejasmic": 29,
+      "NEC|Deveron Fonville": 8,
+      "FC Twente|Marko Pjaca": 7,
       "Fortuna|Moussa Gbemou": 1,
+      "PSV|Noah Fernandez": 2,
+      "FC Twente|Ruud Nijstad": 54,
+      "Feyenoord|Shaqueel van Persie": 4,
       "Sparta|Lushendry Martes": 1,
       "Sparta|Cedric Hatenboer": 1,
       "FC Utrecht|Angel Alarcon": 1,
+      "FC Utrecht|Artem Stepanov": 31,
+      "Go Ahead|Stefan Sigurdarson": 2,
       "Excelsior|Guilliano Cairo": 1,
+      "Cambuur|Rafik El Arguioui": 57,
       "Cambuur|Morgan Costarelli": 1,
+      "Go Ahead|Kjetil Haug": 19,
       "Excelsior|Kasey Bos": 1,
       "ADO|Dani van Loenen": 1,
+      "NEC|Tobias Storm": 19,
+      "Feyenoord|Mika Marmol": 2,
       "FC Utrecht|Kevin Paredes": 1,
+      "NEC|Adam Tahaui": 6,
+      "Excelsior|David Garden": 18,
+      "Fortuna|Siebe Wylin": 2,
       "ADO|Niclas Thiede": 1,
+      "Telstar|Abdelnour Soualhia": 21,
+      "Feyenoord|Nacho Ferri": 4,
+      "Ajax|Caio Henrique": 14,
+      "Fortuna|Nick de Groot": 9,
+      "Ajax|Marcos Leonardo": 4,
+      "ADO|Kilian Nikiema": 28,
+      "ADO|Pascal Mulder": 2,
+      "ADO|Milan Hokke": 6,
+      "ADO|Evan Rottier": 6,
       "ADO|Finn de Bruin": 1,
+      "ADO|Nigel Thomas": 2,
+      "NEC|Clement Bischoff": 2,
+      "Groningen|Elvis van der Laan": 4,
+      "Cambuur|Ismael Baouf": 2,
+      "Ajax|Tolu Arokodare": 103,
+      "Ajax|Julian Brandt": 52,
+      "Ajax|Marc ter Stegen": 5,
+      "Ajax|Abdellah Ouazane": 7,
+      "ADO|Othniel Raterink": 19,
       "Groningen|Mark Csinger": 1,
+      "NEC|Almugera Kabar": 2,
       "Feyenoord|Javi Lopez": 1,
+      "Telstar|Sem Valk": 5,
+      "Excelsior|Eric da Silva Moreira": 6,
       "ADO|Jonas Jensen-Abbew": 1,
-      "Willem II|Maxime Delanghe": 1
+      "Ajax|Viktor Tsygankov": 2,
+      "Willem II|Maxime Delanghe": 1,
+      "Ajax|Thilo Kehrer": 3,
+      "Ajax|Simon Adingra": 2
     },
     "clubs": {
-      "PSV": 347,
-      "Feyenoord": 340,
-      "AZ": 339,
-      "Ajax": 327,
-      "FC Twente": 312,
-      "Go Ahead": 284,
-      "Excelsior": 262,
-      "Fortuna": 246,
-      "NEC": 240,
-      "Groningen": 221,
-      "Telstar": 203,
-      "PEC": 175,
-      "Sparta": 134,
-      "SC Heerenveen": 121,
-      "FC Utrecht": 86,
-      "ADO": 78,
+      "Telstar": 204,
+      "Willem II": 55,
+      "FC Twente": 316,
+      "PSV": 351,
+      "AZ": 343,
+      "Fortuna": 249,
+      "Ajax": 331,
+      "Feyenoord": 344,
       "Cambuur": 69,
-      "Willem II": 55
+      "Go Ahead": 288,
+      "FC Utrecht": 88,
+      "NEC": 244,
+      "Excelsior": 266,
+      "SC Heerenveen": 123,
+      "ADO": 78,
+      "Groningen": 224,
+      "Sparta": 134,
+      "PEC": 176
     }
   },
   "actual": {
-    "asOf": "tot en met ronde 6",
+    "asOf": "tot en met ronde 6 (bijgewerkt)",
     "players": {
       "Sparta|Jens Toornstra": {
         "m": 0,
@@ -282,7 +283,7 @@
         "csm": 1
       },
       "NEC|Tjaronn Chery": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -394,11 +395,11 @@
         "csm": 1
       },
       "Ajax|Steven Berghuis": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -408,7 +409,7 @@
         "csm": 1
       },
       "NEC|Bryan Linssen": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -422,7 +423,7 @@
         "csm": 1
       },
       "ADO|Daryl van Mieghem": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -436,7 +437,7 @@
         "csm": 1
       },
       "Fortuna|Mattijs Branderhorst": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -450,10 +451,10 @@
         "csm": 1
       },
       "Ajax|Davy Klaassen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -492,8 +493,8 @@
         "csm": 1
       },
       "FC Twente|Wout Weghorst": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -548,10 +549,10 @@
         "csm": 1
       },
       "FC Twente|Robin Propper": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
-        "g": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -576,8 +577,8 @@
         "csm": 1
       },
       "Ajax|Sofyan Amrabat": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -660,7 +661,7 @@
         "csm": 1
       },
       "NEC|Jamiro Monteiro": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -688,8 +689,8 @@
         "csm": 1
       },
       "Groningen|Oskar Zawada": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -716,11 +717,11 @@
         "csm": 1
       },
       "NEC|Philippe Sandler": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -786,6 +787,20 @@
         "csm": 1
       },
       "FC Twente|Lars Unnerstall": {
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
+        "g": 0,
+        "y": 0,
+        "y2": 0,
+        "r": 0,
+        "og": 0,
+        "ps": 0,
+        "pm": 0,
+        "tpm": 1,
+        "csm": 1
+      },
+      "PEC|Odysseus Velanas": {
         "m": 0,
         "tp": 0,
         "cs": 0,
@@ -814,10 +829,10 @@
         "csm": 1
       },
       "FC Utrecht|Dani de Wit": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -842,8 +857,8 @@
         "csm": 1
       },
       "Go Ahead|Evert Linthorst": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -884,7 +899,7 @@
         "csm": 1
       },
       "NEC|Kaj Sierhuis": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -898,8 +913,8 @@
         "csm": 1
       },
       "FC Utrecht|Siebe Horemans": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -926,7 +941,7 @@
         "csm": 1
       },
       "Excelsior|Simon Janssen": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -968,7 +983,7 @@
         "csm": 1
       },
       "Fortuna|Mohamed Ihattaren": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -996,8 +1011,8 @@
         "csm": 1
       },
       "Groningen|Etienne Vaessen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1010,8 +1025,8 @@
         "csm": 1
       },
       "Go Ahead|Melle Meulensteen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1052,8 +1067,8 @@
         "csm": 1
       },
       "Go Ahead|Joris Kramer": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1066,8 +1081,8 @@
         "csm": 1
       },
       "Groningen|Marco Rente": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1080,7 +1095,7 @@
         "csm": 1
       },
       "Fortuna|Jasper Dahlhaus": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1094,8 +1109,8 @@
         "csm": 1
       },
       "FC Twente|Ramiz Zerrouki": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1108,9 +1123,9 @@
         "csm": 1
       },
       "Cambuur|Jamal Amofa": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -1136,7 +1151,7 @@
         "csm": 1
       },
       "Fortuna|Ole Romeny": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1164,8 +1179,8 @@
         "csm": 1
       },
       "FC Twente|Daan Rots": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1192,11 +1207,11 @@
         "csm": 1
       },
       "FC Twente|Max Bruns": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -1234,8 +1249,8 @@
         "csm": 1
       },
       "FC Utrecht|Arthur Zagre": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1248,9 +1263,9 @@
         "csm": 1
       },
       "FC Twente|Bart van Rooij": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -1304,7 +1319,7 @@
         "csm": 1
       },
       "Fortuna|Rodrigo Guth": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1318,7 +1333,7 @@
         "csm": 1
       },
       "Fortuna|Ivo Pinto": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1332,8 +1347,8 @@
         "csm": 1
       },
       "FC Utrecht|Davy van den Berg": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1388,11 +1403,11 @@
         "csm": 1
       },
       "ADO|Sekou Sylla": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -1402,7 +1417,7 @@
         "csm": 1
       },
       "Excelsior|Rick Meissen": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1430,8 +1445,8 @@
         "csm": 1
       },
       "FC Utrecht|Vasilios Barkas": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1444,7 +1459,7 @@
         "csm": 1
       },
       "Excelsior|Stijn van Gassel": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1486,8 +1501,8 @@
         "csm": 1
       },
       "Go Ahead|Julius Dirksen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1500,8 +1515,8 @@
         "csm": 1
       },
       "Go Ahead|Dean James": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1528,11 +1543,11 @@
         "csm": 1
       },
       "Fortuna|Lequincio Zeefuik": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -1542,9 +1557,9 @@
         "csm": 1
       },
       "Cambuur|Thijs Jansen": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -1612,11 +1627,11 @@
         "csm": 1
       },
       "Ajax|Youri Baas": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
-        "g": 0,
-        "y": 0,
+        "g": 1,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -1640,8 +1655,8 @@
         "csm": 1
       },
       "Groningen|Thijmen Blokzijl": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1654,8 +1669,8 @@
         "csm": 1
       },
       "Groningen|Thom van Bergen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1710,8 +1725,8 @@
         "csm": 1
       },
       "Groningen|Jorg Schreuders": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1724,9 +1739,9 @@
         "csm": 1
       },
       "Cambuur|Billy van Duijl": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -1766,7 +1781,7 @@
         "csm": 1
       },
       "Excelsior|Irakli Yegoian": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1780,8 +1795,8 @@
         "csm": 1
       },
       "FC Twente|Younes Taha": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1794,8 +1809,8 @@
         "csm": 1
       },
       "Go Ahead|Victor Edvardsen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1836,7 +1851,7 @@
         "csm": 1
       },
       "Excelsior|Lennard Hartjes": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1850,7 +1865,7 @@
         "csm": 1
       },
       "Excelsior|Casper Widell": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -1878,8 +1893,8 @@
         "csm": 1
       },
       "Groningen|Tygo Land": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1906,8 +1921,8 @@
         "csm": 1
       },
       "Ajax|Anton Gaaei": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1920,8 +1935,8 @@
         "csm": 1
       },
       "FC Utrecht|Yoann Cathline": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -1934,8 +1949,8 @@
         "csm": 1
       },
       "FC Twente|Daouda Weidmann": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2032,8 +2047,8 @@
         "csm": 1
       },
       "Go Ahead|Giovanni van Zwam": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2074,10 +2089,10 @@
         "csm": 1
       },
       "Go Ahead|Soren Tengstedt": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -2088,8 +2103,8 @@
         "csm": 1
       },
       "FC Utrecht|Niklas Vesterlund": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2158,8 +2173,8 @@
         "csm": 1
       },
       "FC Utrecht|Matisse Didden": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2172,8 +2187,8 @@
         "csm": 1
       },
       "Go Ahead|Mathis Suray": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2200,7 +2215,7 @@
         "csm": 1
       },
       "Fortuna|Shiloh 't Zand": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2228,10 +2243,10 @@
         "csm": 1
       },
       "Groningen|Brynjolfur Andersen Willumsson": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -2256,8 +2271,8 @@
         "csm": 1
       },
       "Groningen|Wouter Prins": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2270,8 +2285,8 @@
         "csm": 1
       },
       "Groningen|Tika de Jonge": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2284,7 +2299,7 @@
         "csm": 1
       },
       "Fortuna|Baran Yilmaz": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2452,7 +2467,7 @@
         "csm": 1
       },
       "Fortuna|Edouard Michut": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2480,8 +2495,8 @@
         "csm": 1
       },
       "Groningen|David van der Werff": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2536,11 +2551,11 @@
         "csm": 1
       },
       "Ajax|Jorthy Mokio": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -2564,10 +2579,10 @@
         "csm": 1
       },
       "Excelsior|Aymen Sliti": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -2592,7 +2607,7 @@
         "csm": 1
       },
       "Excelsior|Jan Plug": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2676,7 +2691,7 @@
         "csm": 1
       },
       "NEC|Gonzalo Crettaz": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2760,7 +2775,7 @@
         "csm": 1
       },
       "Fortuna|Justin Hubner": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2774,8 +2789,8 @@
         "csm": 1
       },
       "Ajax|Oscar Gloukh": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2816,8 +2831,8 @@
         "csm": 1
       },
       "FC Twente|Sondre Orjasaeter": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2830,11 +2845,11 @@
         "csm": 1
       },
       "NEC|Noe Lebreton": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -2844,7 +2859,7 @@
         "csm": 1
       },
       "NEC|Darko Nejasmic": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2872,8 +2887,8 @@
         "csm": 1
       },
       "FC Twente|Marko Pjaca": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2886,7 +2901,7 @@
         "csm": 1
       },
       "Fortuna|Moussa Gbemou": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -2914,9 +2929,9 @@
         "csm": 1
       },
       "FC Twente|Ruud Nijstad": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -2970,8 +2985,8 @@
         "csm": 1
       },
       "FC Utrecht|Angel Alarcon": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -2984,10 +2999,10 @@
         "csm": 1
       },
       "FC Utrecht|Artem Stepanov": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -2998,8 +3013,8 @@
         "csm": 1
       },
       "Go Ahead|Stefan Sigurdarson": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -3012,7 +3027,7 @@
         "csm": 1
       },
       "Excelsior|Guilliano Cairo": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3026,8 +3041,8 @@
         "csm": 1
       },
       "Cambuur|Rafik El Arguioui": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -3040,9 +3055,9 @@
         "csm": 1
       },
       "Cambuur|Morgan Costarelli": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -3054,8 +3069,8 @@
         "csm": 1
       },
       "Go Ahead|Kjetil Haug": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -3068,7 +3083,7 @@
         "csm": 1
       },
       "Excelsior|Kasey Bos": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3096,11 +3111,11 @@
         "csm": 1
       },
       "NEC|Tobias Storm": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -3138,7 +3153,7 @@
         "csm": 1
       },
       "NEC|Adam Tahaui": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3152,7 +3167,7 @@
         "csm": 1
       },
       "Excelsior|David Garden": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3222,11 +3237,11 @@
         "csm": 1
       },
       "Ajax|Caio Henrique": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -3236,7 +3251,7 @@
         "csm": 1
       },
       "Fortuna|Nick de Groot": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3264,7 +3279,7 @@
         "csm": 1
       },
       "ADO|Kilian Nikiema": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3278,7 +3293,7 @@
         "csm": 1
       },
       "ADO|Pascal Mulder": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3292,7 +3307,7 @@
         "csm": 1
       },
       "ADO|Milan Hokke": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3306,7 +3321,7 @@
         "csm": 1
       },
       "ADO|Evan Rottier": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3320,11 +3335,11 @@
         "csm": 1
       },
       "ADO|Finn de Bruin": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -3348,7 +3363,7 @@
         "csm": 1
       },
       "NEC|Clement Bischoff": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3376,9 +3391,9 @@
         "csm": 1
       },
       "Cambuur|Ismael Baouf": {
-        "m": 0,
-        "tp": 0,
-        "cs": 0,
+        "m": 1,
+        "tp": 3,
+        "cs": 1,
         "g": 0,
         "y": 0,
         "y2": 0,
@@ -3390,8 +3405,8 @@
         "csm": 1
       },
       "Ajax|Tolu Arokodare": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -3404,10 +3419,10 @@
         "csm": 1
       },
       "Ajax|Julian Brandt": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -3418,8 +3433,8 @@
         "csm": 1
       },
       "Ajax|Marc ter Stegen": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -3432,11 +3447,11 @@
         "csm": 1
       },
       "Ajax|Abdellah Ouazane": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -3446,7 +3461,7 @@
         "csm": 1
       },
       "ADO|Othniel Raterink": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3460,8 +3475,8 @@
         "csm": 1
       },
       "Groningen|Mark Csinger": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 1,
         "cs": 0,
         "g": 0,
         "y": 0,
@@ -3474,11 +3489,11 @@
         "csm": 1
       },
       "NEC|Almugera Kabar": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
-        "y": 0,
+        "y": 1,
         "y2": 0,
         "r": 0,
         "og": 0,
@@ -3530,7 +3545,7 @@
         "csm": 1
       },
       "ADO|Jonas Jensen-Abbew": {
-        "m": 0,
+        "m": 1,
         "tp": 0,
         "cs": 0,
         "g": 0,
@@ -3572,10 +3587,10 @@
         "csm": 1
       },
       "Ajax|Thilo Kehrer": {
-        "m": 0,
-        "tp": 0,
+        "m": 1,
+        "tp": 3,
         "cs": 0,
-        "g": 0,
+        "g": 1,
         "y": 0,
         "y2": 0,
         "r": 0,
@@ -3602,44 +3617,24 @@
     }
   },
   "history": [
-    {
-      "date": "2026-09-13",
-      "asOf": "tot en met ronde 6",
-      "totalTeams": 349,
-      "teams": [
-        {
-          "lineupId": 5485,
-          "naam": "FC Sportfreunden",
-          "rank": 50,
-          "punten": 2
-        },
-        {
-          "lineupId": 5486,
-          "naam": "Prive",
-          "rank": 50,
-          "punten": 2
-        }
-      ]
-    },
-    {
-      "date": "2026-09-13",
-      "asOf": "tot en met ronde 6",
-      "totalTeams": 355,
-      "teams": [
-        {
-          "lineupId": 5485,
-          "naam": "FC Sportfreunden",
-          "rank": 167,
-          "punten": 20
-        },
-        {
-          "lineupId": 5486,
-          "naam": "Prive",
-          "rank": 167,
-          "punten": 20
-        }
-      ]
-    }
+      {
+        "date": "2026-09-13",
+        "asOf": "tot en met ronde 6",
+        "totalTeams": 349,
+        "teams": [
+          {"lineupId": 5485, "naam": "FC Sportfreunden", "rank": 50, "punten": 2},
+          {"lineupId": 5486, "naam": "Prive", "rank": 50, "punten": 2}
+        ]
+      },
+      {
+        "date": "2026-09-13",
+        "asOf": "tot en met ronde 6",
+        "totalTeams": 355,
+        "teams": [
+          {"lineupId": 5485, "naam": "FC Sportfreunden", "rank": 167, "punten": 20},
+          {"lineupId": 5486, "naam": "Prive", "rank": 167, "punten": 20}
+        ]
+      }
   ],
-  "updatedAt": "2026-09-13T13:58:07.715Z"
+  "updatedAt": "2026-09-13T14:00:00.000Z"
 }
