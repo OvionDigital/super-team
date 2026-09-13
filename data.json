@@ -3617,24 +3617,44 @@
     }
   },
   "history": [
-      {
-        "date": "2026-09-13",
-        "asOf": "tot en met ronde 6",
-        "totalTeams": 349,
-        "teams": [
-          {"lineupId": 5485, "naam": "FC Sportfreunden", "rank": 50, "punten": 2},
-          {"lineupId": 5486, "naam": "Prive", "rank": 50, "punten": 2}
-        ]
-      },
-      {
-        "date": "2026-09-13",
-        "asOf": "tot en met ronde 6",
-        "totalTeams": 355,
-        "teams": [
-          {"lineupId": 5485, "naam": "FC Sportfreunden", "rank": 167, "punten": 20},
-          {"lineupId": 5486, "naam": "Prive", "rank": 167, "punten": 20}
-        ]
-      }
+    {
+      "date": "2026-09-13",
+      "asOf": "tot en met ronde 6",
+      "totalTeams": 349,
+      "teams": [
+        {
+          "lineupId": 5485,
+          "naam": "FC Sportfreunden",
+          "rank": 50,
+          "punten": 2
+        },
+        {
+          "lineupId": 5486,
+          "naam": "Prive",
+          "rank": 50,
+          "punten": 2
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "asOf": "tot en met ronde 6",
+      "totalTeams": 355,
+      "teams": [
+        {
+          "lineupId": 5485,
+          "naam": "FC Sportfreunden",
+          "rank": 167,
+          "punten": 20
+        },
+        {
+          "lineupId": 5486,
+          "naam": "Prive",
+          "rank": 167,
+          "punten": 20
+        }
+      ]
+    }
   ],
-  "updatedAt": "2026-09-13T14:00:00.000Z"
+  "updatedAt": "2026-09-13T17:14:18.043Z"
 }
