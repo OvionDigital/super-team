@@ -31,7 +31,6 @@ jobs:
 
       - name: Check Superteam
         env:
-          SUPERTEAM_SESSION_TOKEN: ${{ secrets.SUPERTEAM_SESSION_TOKEN }}
           SUPERTEAM_REFRESH_TOKEN: ${{ secrets.SUPERTEAM_REFRESH_TOKEN }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: node check-superteam.js
