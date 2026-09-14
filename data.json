@@ -3684,7 +3684,26 @@
           "punten": 20
         }
       ]
+    },
+    {
+      "date": "2026-09-14",
+      "asOf": "tot en met ronde 6",
+      "totalTeams": 367,
+      "teams": [
+        {
+          "lineupId": 5485,
+          "naam": "FC Sportfreunden",
+          "rank": 81,
+          "punten": 39
+        },
+        {
+          "lineupId": 5486,
+          "naam": "Prive",
+          "rank": 164,
+          "punten": 36
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-09-13T20:00:00.000Z"
+  "updatedAt": "2026-09-14T18:13:19.963Z"
 }
