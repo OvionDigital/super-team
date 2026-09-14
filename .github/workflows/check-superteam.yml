@@ -2,7 +2,7 @@ name: Check Superteam voor updates
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # elke 30 minuten, niet minuutnauwkeurig, dat hoeft ook niet
+    - cron: '*/5 * * * *'   # elke 30 minuten, niet minuutnauwkeurig, dat hoeft ook niet
   workflow_dispatch: {}       # handmatig starten via de Actions-tab
 
 permissions:
