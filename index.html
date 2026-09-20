@@ -1,5 +1,12 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='white' stroke='black' stroke-width='3'/%3E%3Cpolygon points='32,16 43,24 39,37 25,37 21,24' fill='black'/%3E%3Cline x1='32' y1='2' x2='32' y2='16' stroke='black' stroke-width='2.5'/%3E%3Cline x1='2' y1='32' x2='21' y2='24' stroke='black' stroke-width='2.5'/%3E%3Cline x1='9' y1='55' x2='25' y2='37' stroke='black' stroke-width='2.5'/%3E%3Cline x1='55' y1='55' x2='39' y2='37' stroke='black' stroke-width='2.5'/%3E%3Cline x1='62' y1='32' x2='43' y2='24' stroke='black' stroke-width='2.5'/%3E%3C/svg%3E">
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Superteam</title>
+<meta name="theme-color" content="#11161C">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..112,400..700&display=swap" rel="stylesheet">
@@ -557,40 +564,92 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
   .nav .theme svg{width:17px;height:17px;opacity:1}
   .mainArea{flex:1 1 auto;min-width:0}
 
-  .dashGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;padding:16px}
-  .dwidget{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 17px;
+  /* ---------- topbar (alleen mobiel) ---------- */
+  .topbar{display:none}
+  .btn.fxBtn{display:none}
+  .showM{display:none}
+  .scrim{display:none}
+
+  /* ---------- dashboard ---------- */
+  .dashGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;padding:18px;max-width:1500px}
+  .dwidget{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;min-width:0;
     box-shadow:0 1px 2px rgba(15,23,32,.05),0 14px 32px -22px rgba(15,23,32,.28);animation:rowIn .25s ease both}
   [data-theme="dark"] .dwidget{box-shadow:0 1px 2px rgba(0,0,0,.35),0 14px 32px -22px rgba(0,0,0,.55)}
-  .dwidget h3{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;
+  .dHero,.dFull{grid-column:span 12}
+  .dHalf{grid-column:span 6}
+  .dHead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .dwidget h3{margin:0;font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;
     letter-spacing:.05em;font-stretch:88%}
-  .dwidget .big{font-size:27px;font-weight:700;font-stretch:90%;line-height:1.2;
+  .dMeta{font-size:13px;color:var(--muted);font-stretch:92%;font-weight:400;text-transform:none;letter-spacing:0}
+  .dLink{font-size:14px;color:var(--accent);font-stretch:92%;padding:2px 0;white-space:nowrap}
+  .dLink:hover{text-decoration:underline}
+  .dNote{margin:-4px 0 10px;font-size:14px;color:var(--muted);font-stretch:94%}
+  .dSub{font-size:14px;font-weight:600;font-stretch:92%;margin-bottom:6px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+
+  .heroBody{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;align-items:stretch}
+  .heroTeams{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+  .hTeam{border:1px solid var(--line2);border-radius:12px;padding:14px 15px;background:var(--paper);
+    display:flex;flex-direction:column;gap:4px;min-width:0}
+  .hTeam .tn{font-size:15px;font-weight:600;font-stretch:92%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hTeam .rk{font-size:44px;font-weight:700;font-stretch:88%;line-height:1.05;letter-spacing:-.01em;
     background:linear-gradient(135deg,var(--ink),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .dwidget .sub{font-size:14px;color:var(--muted);margin-top:2px}
-  .dwidget .rows{display:flex;flex-direction:column;gap:8px;margin-top:2px}
-  .dwidget .row2{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14.5px}
-  .dwidget .row2 span:first-child{display:flex;align-items:center;gap:7px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .dwidget .row2 b{font-weight:600;font-stretch:94%;flex:0 0 auto}
-  .dwidget.wide{grid-column:span 2}
-  .dwidget .shortcut{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;
-    border:1px solid var(--line);border-radius:8px;font-size:14.5px;color:var(--ink);text-align:left}
-  .dwidget .shortcut:hover{border-color:var(--muted);background:var(--focus)}
-  .dwidget .shortcut svg{width:15px;height:15px;opacity:.6;flex:0 0 auto}
-  @media(max-width:640px){.dwidget.wide{grid-column:span 1}}
-  @media(max-width:1180px){
-    .appLayout{flex-direction:column}
-    .nav{flex-direction:row;align-items:center;position:static;height:auto;width:auto;padding:8px 10px;
-      overflow-x:auto;overflow-y:visible;box-shadow:0 8px 24px -18px rgba(15,23,32,.35);border-right:none;
-      border-bottom:1px solid var(--glassBorder)}
-    .brand{padding:4px 10px;flex:0 0 auto}
-    .nav button{padding:9px 12px;white-space:nowrap;flex:0 0 auto}
-    .nav .theme{margin:0 0 0 auto}
-  }
+  .hTeam .ln{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:14px;color:var(--muted);font-stretch:94%}
+  .hTeam .ln b{color:var(--ink);font-weight:600}
+  .delta{display:inline-flex;align-items:center;gap:3px;font-size:13px;font-weight:600;padding:1px 8px;border-radius:20px}
+  .delta.up{color:var(--good);background:var(--goodbg)}
+  .delta.down{color:var(--out);background:var(--outbg)}
+  .delta.eq{color:var(--muted);background:var(--line2)}
+  .pctbar{height:6px;border-radius:3px;background:var(--line2);overflow:hidden;margin-top:6px}
+  .pctbar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .heroChart{min-width:0}
+  .heroChart svg{display:block;width:100%;height:auto}
+
+  .segs{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:10px}
+  .segs button{padding:5px 13px;font-size:14px;color:var(--muted);font-stretch:94%}
+  .segs button+button{border-left:1px solid var(--line)}
+  .segs button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+
+  .dList{display:flex;flex-direction:column}
+  .dRow{display:grid;grid-template-columns:22px minmax(0,1fr) auto;align-items:center;gap:10px;padding:7px 0;
+    border-top:1px solid var(--line2)}
+  .dRow:first-child{border-top:none}
+  .dRow .nr{font-size:13px;color:var(--muted);text-align:right}
+  .dRow .who{display:flex;align-items:center;gap:9px;min-width:0}
+  .dRow .who .t{min-width:0;display:flex;flex-direction:column}
+  .dRow .who b{font-weight:550;font-stretch:96%;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dRow .who small{font-size:13px;color:var(--muted);font-stretch:92%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dRow .val{display:flex;flex-direction:column;align-items:flex-end;gap:3px;min-width:74px}
+  .dRow .val b{font-size:16px;font-weight:600;font-stretch:94%}
+  .dRow .val small{font-size:12.5px;color:var(--muted);white-space:nowrap}
+  .dRow .mini{width:74px;height:5px;border-radius:3px;background:var(--line2);overflow:hidden}
+  .dRow .mini i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .dRow .cd{width:24px;height:24px}
+  .dEmpty{padding:14px 0;color:var(--muted);font-size:14px}
+
+  .lineups{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+  .lu{border:1px solid var(--line2);border-radius:12px;padding:13px 14px;background:var(--paper);text-align:left;
+    display:flex;flex-direction:column;gap:9px;min-width:0}
+  .lu:hover{border-color:var(--muted)}
+  .lu .lt{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .lu .lt b{font-size:16px;font-weight:600;font-stretch:92%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .lu .lt span{font-size:13px;color:var(--muted);flex:0 0 auto}
+  .lu .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .lu .stats div{display:flex;flex-direction:column}
+  .lu .stats small{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-stretch:88%;font-weight:600}
+  .lu .stats b{font-size:18px;font-weight:600;font-stretch:92%}
+  .lu .shirts{display:flex;flex-wrap:wrap;gap:3px;min-height:20px}
+  .lu .shirts .cd{width:18px;height:18px}
+  .lu .shirts .emptyslot{width:18px;height:18px;border-radius:50%;border:1.5px dashed var(--line)}
+
+  @media(max-width:1100px){.heroBody{grid-template-columns:1fr}}
+  @media(max-width:900px){.dHalf{grid-column:span 12}}
 
   .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;padding:14px;align-items:start}
-  @media(max-width:1180px){.wrap{grid-template-columns:1fr;padding:10px;gap:10px}
+  @media(max-width:1180px){.wrap{grid-template-columns:minmax(0,1fr);padding:10px;gap:10px}
     .pane[hidden]{display:none} .tabs{display:flex}}
   .tabs{display:none;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);margin:10px 10px 0}
   .tabs button{flex:1;padding:11px;color:var(--muted);font-stretch:94%}
+  @media(max-width:1180px){.tabs{display:flex}}
   .tabs button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
   .view[hidden]{display:none}
 
@@ -839,10 +898,142 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
   dialog .db{padding:15px}
   dialog textarea{width:100%;height:200px;border:1px solid var(--line);border-radius:7px;padding:9px;
     font:inherit;font-size:14px;background:var(--paper);resize:vertical}
+
+  /* ======================= mobiel ======================= */
+  @media(max-width:900px){
+    .appLayout{flex-direction:column}
+    .topbar{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:40;
+      padding:8px 12px;padding-top:max(8px,env(safe-area-inset-top));
+      background:var(--glass);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+      border-bottom:1px solid var(--line)}
+    .menuBtn{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+      border:1px solid var(--line);background:var(--card)}
+    .menuBtn svg{width:22px;height:22px}
+    .tbTitle{font-weight:600;font-size:17px;font-stretch:92%;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .tbBall{width:26px;height:26px}
+    .nav{position:fixed;top:0;left:0;bottom:0;height:100%;width:min(290px,84vw);background:var(--card);
+      transform:translateX(-102%);transition:transform .25s cubic-bezier(.2,.8,.2,1);z-index:60;
+      padding:18px 14px calc(16px + env(safe-area-inset-bottom));box-shadow:none}
+    .nav.open{transform:none;box-shadow:24px 0 48px -16px rgba(0,0,0,.45)}
+    .nav button{padding:13px 14px;font-size:16px}
+    .scrim{display:block;position:fixed;inset:0;background:rgba(10,14,20,.5);z-index:55;opacity:0;pointer-events:none;
+      transition:opacity .25s ease}
+    .scrim.on{opacity:1;pointer-events:auto}
+    .scrim[hidden]{display:block}
+    body.navOpen{overflow:hidden}
+
+    .dashGrid{padding:12px;gap:12px}
+    .dwidget{padding:15px 15px}
+  }
+  @media(max-width:640px){
+    .heroTeams{grid-template-columns:1fr 1fr;gap:9px}
+    .hTeam{padding:12px}
+    .hTeam .rk{font-size:36px}
+    .xwrap{padding:10px;gap:10px}
+    .wrap{padding:10px}
+    .tabs{margin:10px 10px 0}
+    .panel h2{padding:12px 13px 10px;flex-wrap:wrap}
+    .intro{padding:11px 13px;font-size:14.5px}
+    .filters{padding:11px 13px}
+    .search{width:100%}
+    .ip{flex:1 1 200px}
+    /* chips in één scrollbare rij in plaats van vijf regels hoog */
+    #fClub,#pClub,#aClub,#bClub,#fPos,#pPos,#aPos,#fPrice{flex-wrap:nowrap;overflow-x:auto;margin:0 -13px;padding:1px 13px 3px;
+      scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    #fClub::-webkit-scrollbar,#pClub::-webkit-scrollbar,#aClub::-webkit-scrollbar,#bClub::-webkit-scrollbar,
+    #fPos::-webkit-scrollbar,#pPos::-webkit-scrollbar,#aPos::-webkit-scrollbar,#fPrice::-webkit-scrollbar{display:none}
+    .chip{flex:0 0 auto;white-space:nowrap}
+    .toolbar{padding:11px 13px 0}
+    #paneSquad .toolbar{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    #paneSquad .toolbar .forms{grid-column:1/-1}
+    #paneSquad .toolbar .forms button{flex:1}
+    #paneSquad .toolbar .btn{justify-content:center;margin:0}
+    .toolbar .btn{padding:7px 10px;font-size:14px}
+    .bulk{padding:10px 13px}
+
+    /* spelerspool als compacte kaartjes */
+    .scroll>.phead,.scroll>.ohead{display:flex;flex-wrap:wrap;gap:6px;min-width:0;padding:9px 13px;align-items:center}
+    .scroll>.phead button,.scroll>.ohead button{padding:5px 11px;border:1px solid var(--line);border-radius:20px;font-size:12.5px;gap:3px}
+    .phead .arw,.ohead .arw{display:none}
+    .phead button[data-on="1"] .arw,.ohead button[data-on="1"] .arw{display:inline}
+    .btn.fxBtn{display:inline-flex}
+    .hideM{display:none}
+    .showM{display:inline}
+    .filters.fx>.row:first-child{flex-wrap:nowrap}
+    .filters.fx>.row:first-child .ip{flex:1 1 auto;min-width:0}
+    .filters.fx>.row:first-child .btn{flex:0 0 auto;padding:7px 10px;font-size:14px}
+    .filters.fx>.row:first-child #btnFilterClear{order:3}
+    .filters.fx>.row:not(:first-child){display:none}
+    .filters.fx.open>.row{display:flex}
+    .phead button[data-on="1"],.ohead button[data-on="1"]{border-color:var(--ink)}
+    .phead>span,.ohead>span{display:none}
+    .phead .cbx{margin:0 4px 0 0}
+    .p{min-width:0;grid-template-columns:22px minmax(0,1fr) auto auto 52px auto;grid-template-rows:auto auto;
+      gap:3px 9px;padding:9px 12px 9px 0}
+    .p>.cbx{grid-area:1/1/3/2;margin-left:8px}
+    .p>.naam{grid-area:1/2/2/5}
+    .p>.club{grid-area:2/2/3/3}
+    .p>div:nth-of-type(4){grid-area:2/3/3/4}
+    .p>div:nth-of-type(5){grid-area:2/4/3/5}
+    .p>div:nth-of-type(6){grid-area:1/5/2/6;text-align:right}
+    .p>div:nth-of-type(7){grid-area:2/5/3/6;text-align:right}
+    .p>div:nth-of-type(6)::before{content:'xP ';font-size:11px;color:var(--muted);font-weight:400}
+    .p>div:nth-of-type(7)::before{content:'echt ';font-size:11px;color:var(--muted);font-weight:400}
+    .p>.acts{grid-area:1/6/2/7;padding-left:0;justify-content:flex-end}
+    .p>.nw{grid-area:2/6/3/7}
+    .p .posb{width:23px;height:21px;font-size:12.5px}
+    .p .bars{display:none}
+    .noteBtn{width:30px;height:30px}
+
+    .orow{min-width:0;grid-template-columns:auto minmax(0,1fr) auto auto;grid-template-rows:auto auto;gap:3px 10px;padding:9px 13px}
+    .orow>.toggleSw{grid-area:1/1/3/2}
+    .orow>.naam{grid-area:1/2/2/3}
+    .orow>div:nth-of-type(3){grid-area:1/3/2/4}
+    .orow>div:nth-of-type(4){grid-area:1/4/2/5}
+    .orow>.club{grid-area:2/2/3/3}
+    .orow>.ownwrap{grid-area:2/3/3/5}
+    .orow .bars{display:none}
+    .orow .ownbar{min-width:30px}
+    .ownclub{grid-template-columns:118px 1fr 52px 40px;gap:8px}
+
+    /* brede invoertabellen: horizontaal scrollen met vaste naamkolom */
+    .xhead,.xr{grid-template-columns:150px repeat(10,58px) 64px;min-width:0;width:max-content;padding-left:0}
+    .xhead>:first-child,.xr>.who{position:sticky;left:0;z-index:1;background:var(--card);padding-left:13px;align-self:stretch;display:flex;align-items:center}
+    .xr:focus-within>.who{background:var(--focus)}
+    .xr .who .posb{display:none}
+    .ctab{grid-template-columns:130px 56px minmax(200px,1fr) 56px 100px 96px 64px 88px;min-width:900px;padding-left:0}
+    .ctab>:first-child{position:sticky;left:0;z-index:1;background:var(--card);padding-left:13px;align-self:stretch;display:flex;align-items:center}
+
+    /* veld */
+    .pitch{margin:12px 10px;padding:22px 6px;gap:22px;min-height:0}
+    .lane{gap:4px}
+    .badge,.sl.free .ring{width:54px;height:54px}
+    .badge .cd{width:34px;height:34px}
+    .badge .rm{width:22px;height:22px;top:-5px;right:-5px}
+    .sl b{font-size:13px}
+    .sl .cl{display:none}
+    .sl .prc .bars{display:none}
+    .sl .xpv{font-size:12.5px}
+    .budget{padding:13px 13px 4px}
+    .xptot{padding:10px 13px 0}
+    .clubs{padding:0 13px 13px}
+
+    .bres{padding:12px 13px}
+    .bhead .btn{margin-left:0}
+    dialog{max-width:94vw;width:94vw}
+    .saving{left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom))}
+  }
 </style>
 
 <div class="appLayout">
-<nav class="nav" role="navigation" aria-label="Weergave">
+<header class="topbar">
+  <button class="menuBtn" id="menuBtn" aria-label="Menu openen" aria-expanded="false" aria-controls="sideNav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <span class="tbTitle" id="tbTitle">Dashboard</span>
+  <img class="tbBall" src="favicon-192.png" alt="" width="26" height="26">
+</header>
+<div class="scrim" id="scrim" hidden></div>
+<nav class="nav" id="sideNav" role="navigation" aria-label="Weergave">
   <div class="brand">
     <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="3.5"/>
       <polygon points="32,17 42,24.5 38.5,36 25.5,36 22,24.5" fill="currentColor"/>
@@ -888,38 +1079,49 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
 <main class="mainArea">
 <div class="view" id="viewDash">
   <div class="dashGrid">
-    <div class="dwidget">
-      <h3>Actieve opstelling</h3>
-      <div class="big" id="dwTeamName">–</div>
-      <div class="sub" id="dwTeamBudget">–</div>
-    </div>
-    <div class="dwidget">
-      <h3>Verwachte punten</h3>
-      <div class="big" id="dwXp">–</div>
-      <div class="sub">voor je actieve opstelling</div>
-    </div>
-    <div class="dwidget">
-      <h3>Mijn positie</h3>
-      <div class="big" id="dwRank">–</div>
-      <div class="sub" id="dwRankSub">nog geen stand geïmporteerd</div>
-    </div>
-    <div class="dwidget">
-      <h3>Cijfers werkelijke punten</h3>
-      <div class="big" id="dwCoverage">–</div>
-      <div class="sub" id="dwCoverageSub">spelers met cijfers</div>
-    </div>
-    <div class="dwidget wide">
-      <h3>Topscorers tot nu toe</h3>
-      <div class="rows" id="dwTopScorers"></div>
-    </div>
-    <div class="dwidget wide">
-      <h3>Populairste spelers</h3>
-      <div class="rows" id="dwTopOwned"></div>
-    </div>
-    <div class="dwidget wide">
-      <h3>Snel verder</h3>
-      <div class="rows" id="dwShortcuts"></div>
-    </div>
+    <section class="dwidget dHero">
+      <div class="dHead"><h3>Mijn positie</h3><span class="dMeta" id="dwFresh"></span></div>
+      <div class="heroBody">
+        <div class="heroTeams" id="dwTeams"></div>
+        <div class="heroChart">
+          <div class="dSub">Rang door de tijd <span class="dMeta">hoe hoger de lijn, hoe beter</span></div>
+          <div id="dwChart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dwidget dHalf">
+      <div class="dHead"><h3>Topscorers</h3><button class="dLink" data-goto="actual">Alles bekijken</button></div>
+      <div class="segs" id="dwTopPos" role="group" aria-label="Positie">
+        <button data-p="" aria-pressed="true">Alle</button><button data-p="K" aria-pressed="false">K</button>
+        <button data-p="V" aria-pressed="false">V</button><button data-p="M" aria-pressed="false">M</button>
+        <button data-p="A" aria-pressed="false">A</button>
+      </div>
+      <div class="dList" id="dwTopScorers"></div>
+    </section>
+
+    <section class="dwidget dHalf">
+      <div class="dHead"><h3>Verborgen parels</h3><button class="dLink" data-goto="pop">Populariteit</button></div>
+      <p class="dNote">Net onder de topscorers, maar bij minder dan 5% van de poule. Hier win je plekken mee.</p>
+      <div class="dList" id="dwDiffs"></div>
+    </section>
+
+    <section class="dwidget dHalf">
+      <div class="dHead"><h3>Populairste spelers</h3><button class="dLink" data-goto="pop">Alles bekijken</button></div>
+      <p class="dNote">Wie de rest van de poule heeft. Heb jij ze niet, dan loop je risico als ze scoren.</p>
+      <div class="dList" id="dwTopOwned"></div>
+    </section>
+
+    <section class="dwidget dHalf">
+      <div class="dHead"><h3>Meeste punten per miljoen</h3><button class="dLink" data-goto="best">Beste opstellingen</button></div>
+      <p class="dNote">Werkelijke punten gedeeld door prijs. Handig om budget vrij te spelen.</p>
+      <div class="dList" id="dwValue"></div>
+    </section>
+
+    <section class="dwidget dFull">
+      <div class="dHead"><h3>Mijn opstellingen</h3><button class="dLink" data-goto="build">Team bouwen</button></div>
+      <div id="dwLineups"></div>
+    </section>
   </div>
 </div>
 
@@ -936,7 +1138,7 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
       <div class="row">
         <span class="ip"><input class="search" id="q" placeholder="Zoek op naam" autocomplete="off">
           <button class="clrx" id="qClr" hidden title="Zoekterm wissen">×</button></span>
-        <button class="btn" id="btnFilterClear">Filters wissen</button>
+        <button class="btn" id="btnFilterClear" title="Alle filters wissen">Wis<span class="hideM"> filters</span></button>
       </div>
       <div class="row" id="fClub" role="group" aria-label="Clubs"></div>
       <div class="row" id="fPos" role="group" aria-label="Positie"></div>
@@ -1046,8 +1248,8 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
         opslag voor uitwedstrijden, dus hoger is zwaarder. Vul je rechts een gemiddeld aantal punten per wedstrijd
         in, dan rekent de tool de teampunten van elke speler van die club voor je uit: gemiddelde maal aantal
         wedstrijden, afgerond op een heel getal. Je kunt dat per speler altijd overschrijven.</p>
-      <div class="ctab chead2" id="cHead"></div>
-      <div class="clubgrid" id="clubCards"></div>
+      <div class="scroll clubscroll"><div class="ctab chead2" id="cHead"></div>
+      <div class="clubgrid" id="clubCards"></div></div>
     </section>
 
     <section class="panel">
@@ -1119,7 +1321,7 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
         <div class="row">
           <span class="ip"><input class="search" id="pq" placeholder="Zoek op naam" autocomplete="off">
             <button class="clrx" id="pqClr" hidden title="Zoekterm wissen">×</button></span>
-          <button class="btn" id="btnPopImport">Cijfers importeren</button>
+          <button class="btn" id="btnPopImport"><span class="hideM">Cijfers importeren</span><span class="showM">Import</span></button>
         </div>
         <div class="row" id="pClub" role="group" aria-label="Clubs"></div>
         <div class="row" id="pPos" role="group" aria-label="Positie"></div>
@@ -1158,7 +1360,7 @@ Willem II,aanvaller,Ismael Mouhoul,1</script>
         <div class="row">
           <span class="ip"><input class="search" id="aq" placeholder="Zoek op naam" autocomplete="off">
             <button class="clrx" id="aqClr" hidden title="Zoekterm wissen">×</button></span>
-          <button class="btn" id="btnActImport">Cijfers importeren</button>
+          <button class="btn" id="btnActImport"><span class="hideM">Cijfers importeren</span><span class="showM">Import</span></button>
         </div>
         <div class="row" id="aClub" role="group" aria-label="Clubs"></div>
         <div class="row" id="aPos" role="group" aria-label="Positie"></div>
@@ -1877,51 +2079,117 @@ document.getElementById('noteDlgDel').onclick=()=>{
 document.getElementById('noteDlgCancel').onclick=()=>noteDlg.close();
 
 /* ---------- dashboard ---------- */
-function renderDashboard(){
-  const t=cur();
-  document.getElementById('dwTeamName').textContent=t?t.naam:'–';
-  document.getElementById('dwTeamBudget').textContent=t?`€${spent()} van €${BUDGET} besteed`:'nog geen opstelling';
-  document.getElementById('dwXp').textContent=t?fmt1(teamXp(t)):'–';
-
-  const hist=(S.history||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
-  const last=hist[hist.length-1];
-  if(last&&last.teams&&last.teams.length){
-    const best=last.teams.reduce((a,b)=>(+a.rank||9e9)<(+b.rank||9e9)?a:b);
-    document.getElementById('dwRank').textContent='#'+esc(best.rank);
-    const rest=last.teams.map(x=>`${esc(x.naam||'Team '+x.lineupId)}: #${esc(x.rank)} · ${esc(x.punten)} pt`).join(' · ');
-    document.getElementById('dwRankSub').textContent=`${rest} (${last.asOf||''})`;
-  }else{
-    document.getElementById('dwRank').textContent='–';
-    document.getElementById('dwRankSub').textContent='nog geen stand geïmporteerd';
-  }
-
-  const withActual=Object.keys((S.actual&&S.actual.players)||{}).length;
-  document.getElementById('dwCoverage').textContent=withActual+' / '+PLAYERS.length;
-  document.getElementById('dwCoverageSub').textContent=S.actual&&S.actual.asOf?S.actual.asOf:'nog niet geïmporteerd';
-
-  const topScorers=PLAYERS.map(p=>({p,v:actualOf(p)})).filter(x=>x.v!==null&&x.v>0)
-    .sort((a,b)=>b.v-a.v).slice(0,5);
-  document.getElementById('dwTopScorers').innerHTML=topScorers.length?topScorers.map(x=>
-    `<div class="row2"><span>${shirt(x.p.club)}${esc(x.p.naam)}</span><b>${fmt1(x.v)} pt</b></div>`).join('')
-    :'<p class="empty" style="padding:6px 0">Nog geen werkelijke punten geïmporteerd.</p>';
-
-  const own=S.ownership||{};
-  const topOwned=Object.entries(own.players||{}).map(([id,cnt])=>({p:byId(id),cnt}))
-    .filter(x=>x.p).sort((a,b)=>b.cnt-a.cnt).slice(0,5);
-  document.getElementById('dwTopOwned').innerHTML=topOwned.length?topOwned.map(x=>
-    `<div class="row2"><span>${shirt(x.p.club)}${esc(x.p.naam)}</span><b>${own.totalTeams?fmt1(x.cnt/own.totalTeams*100)+'%':x.cnt}</b></div>`).join('')
-    :'<p class="empty" style="padding:6px 0">Nog geen populariteit geïmporteerd.</p>';
-
-  document.getElementById('dwShortcuts').innerHTML=`
-    <button class="shortcut" data-goto="best">Beste opstelling bekijken
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
-    <button class="shortcut" data-goto="pop">Populariteit bekijken
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
-    <button class="shortcut" data-goto="actual">Werkelijke punten bekijken
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>`;
-  document.getElementById('dwShortcuts').querySelectorAll('[data-goto]').forEach(b=>
-    b.onclick=()=>nav(b.dataset.goto));
+let DW={pos:''};
+function dRow(i,p,sub,valHtml){
+  return `<div class="dRow"><span class="nr">${i}</span>
+    <span class="who">${shirt(p.club)}<span class="t"><b title="${esc(p.naam)}">${esc(p.naam)}</b><small>${esc(p.club)} · ${p.pos} · €${p.prijs}${sub?' · '+sub:''}</small></span></span>
+    <span class="val">${valHtml}</span></div>`;
 }
+function fmtDate(iso){
+  try{return new Date(iso).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});}catch(e){return '';}
+}
+function rankChart(hist){
+  if(!hist.length)return '<p class="dEmpty">Nog geen stand opgehaald.</p>';
+  const names=[...new Set(hist.flatMap(h=>h.teams.map(t=>t.naam||('Team '+t.lineupId))))];
+  const colors=['var(--accent)','var(--good)','var(--maybe)','var(--out)'];
+  const cw=document.getElementById('dwChart').clientWidth||640,W=Math.max(320,Math.min(760,cw)),H=W<500?190:210,pl=44,pr=26,pt=14,pb=28;
+  const ranks=hist.flatMap(h=>h.teams.map(t=>+t.rank).filter(Boolean));
+  const lo=1,hi=Math.max(10,Math.ceil(Math.max(...ranks)*1.1/10)*10);
+  const x=i=>hist.length>1?pl+i*(W-pl-pr)/(hist.length-1):(pl+W-pr)/2;
+  const y=r=>pt+(r-lo)*(H-pt-pb)/(hi-lo);
+  let g='';
+  const ticks=[1,Math.round(hi/2),hi];
+  ticks.forEach(t=>{g+=`<line x1="${pl}" x2="${W-pr}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line2)" stroke-dasharray="${t===1?'':'3 4'}"/>
+    <text x="${pl-8}" y="${y(t)+4}" font-size="12" fill="var(--muted)" text-anchor="end">#${t}</text>`;});
+  const step=Math.max(1,Math.ceil(hist.length/6));
+  hist.forEach((h,i)=>{if(i%step===0||i===hist.length-1){
+    const d=new Date(h.date+'T12:00');const lab=isNaN(d)?h.date:d.toLocaleDateString('nl-NL',{day:'numeric',month:'short'});
+    g+=`<text x="${x(i)}" y="${H-8}" font-size="12" fill="var(--muted)" text-anchor="middle">${esc(lab)}</text>`;}});
+  names.forEach((nm,ni)=>{
+    const pts=hist.map((h,i)=>{const t=h.teams.find(tt=>(tt.naam||('Team '+tt.lineupId))===nm);
+      return t&&t.rank?[x(i),y(+t.rank),h,t]:null;}).filter(Boolean);
+    const col=colors[ni%colors.length];
+    if(pts.length>1)g+=`<polyline points="${pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
+    pts.forEach((p,k)=>{const lastPt=k===pts.length-1;
+      g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${lastPt?5:3.5}" fill="${lastPt?col:'var(--card)'}" stroke="${col}" stroke-width="2"><title>${esc(nm)}: #${esc(p[3].rank)} · ${esc(p[3].punten)} pt (${esc(p[2].date)})</title></circle>`;});
+  });
+  const legend=names.map((nm,ni)=>`<span style="display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:13px;color:var(--muted)">
+    <span style="width:10px;height:10px;border-radius:50%;background:${colors[ni%colors.length]}"></span>${esc(nm)}</span>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Rang door de tijd">${g}</svg><div style="margin-top:4px">${legend}</div>`;
+}
+function renderDashboard(){
+  /* --- positie --- */
+  const hist=(S.history||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  const last=hist[hist.length-1],prev=hist[hist.length-2];
+  document.getElementById('dwFresh').textContent=S.dataUpdatedAt?'bijgewerkt '+fmtDate(S.dataUpdatedAt):(last?last.asOf:'');
+  const T=document.getElementById('dwTeams');
+  if(last&&last.teams&&last.teams.length){
+    const tot=last.totalTeams||(S.ownership&&S.ownership.totalTeams)||0;
+    T.innerHTML=last.teams.map(t=>{
+      const pv=prev&&prev.teams.find(x=>x.lineupId===t.lineupId);
+      let dl='';
+      if(pv&&pv.rank&&t.rank){const d=pv.rank-t.rank;
+        dl=d>0?`<span class="delta up" title="Sinds vorige meting">▲ ${d}</span>`:d<0?`<span class="delta down" title="Sinds vorige meting">▼ ${-d}</span>`:`<span class="delta eq">=</span>`;}
+      const top=tot&&t.rank?Math.max(1,Math.round(t.rank/tot*100)):null;
+      return `<div class="hTeam"><span class="tn" title="${esc(t.naam)}">${esc(t.naam||'Team '+t.lineupId)}</span>
+        <span class="rk">#${esc(t.rank??'–')}</span>
+        <span class="ln"><span><b>${esc(t.punten??'–')}</b> punten</span>${dl}</span>
+        ${top?`<span class="ln">top ${top}% van ${tot}</span><span class="pctbar"><i style="width:${100-top}%"></i></span>`:''}
+      </div>`;}).join('');
+  }else T.innerHTML='<p class="dEmpty">Nog geen stand opgehaald.</p>';
+  document.getElementById('dwChart').innerHTML=rankChart(hist);
+
+  /* --- topscorers --- */
+  const own=S.ownership||{},tot=own.totalTeams||0;
+  const pct=p=>tot?fmt1(ownedCountOf(p.id)/tot*100)+'%':'';
+  const scored=PLAYERS.map(p=>({p,v:actualOf(p)})).filter(x=>x.v!==null&&x.v>0);
+  const top=scored.filter(x=>!DW.pos||x.p.pos===DW.pos).sort((a,b)=>b.v-a.v).slice(0,8);
+  const maxV=Math.max(1,...top.map(x=>x.v));
+  document.getElementById('dwTopScorers').innerHTML=top.length?top.map((x,i)=>dRow(i+1,x.p,tot?pct(x.p)+' gekozen':'',
+    `<b>${fmt1(x.v)} pt</b><span class="mini"><i style="width:${x.v/maxV*100}%"></i></span>`)).join('')
+    :'<p class="dEmpty">Nog geen werkelijke punten binnen.</p>';
+  document.querySelectorAll('#dwTopPos button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.p===DW.pos));
+
+  /* --- verborgen parels --- */
+  const topIds=new Set(scored.slice().sort((a,b)=>b.v-a.v).slice(0,8).map(x=>x.p.id));
+  const diffs=tot?scored.filter(x=>!topIds.has(x.p.id)&&ownedCountOf(x.p.id)/tot<.05).sort((a,b)=>b.v-a.v||ownedCountOf(a.p.id)-ownedCountOf(b.p.id)).slice(0,6):[];
+  document.getElementById('dwDiffs').innerHTML=diffs.length?diffs.map((x,i)=>dRow(i+1,x.p,'',
+    `<b>${fmt1(x.v)} pt</b><small>${pct(x.p)} gekozen</small>`)).join('')
+    :'<p class="dEmpty">Nog geen populariteit of punten binnen.</p>';
+
+  /* --- populairst --- */
+  const topOwned=Object.entries(own.players||{}).map(([id,cnt])=>({p:byId(id),cnt})).filter(x=>x.p)
+    .sort((a,b)=>b.cnt-a.cnt).slice(0,6);
+  const maxO=Math.max(1,...topOwned.map(x=>x.cnt));
+  document.getElementById('dwTopOwned').innerHTML=topOwned.length?topOwned.map((x,i)=>{const a=actualOf(x.p);
+    return dRow(i+1,x.p,a!==null?fmt1(a)+' pt':'',
+    `<b>${tot?fmt1(x.cnt/tot*100)+'%':x.cnt}</b><span class="mini"><i style="width:${x.cnt/maxO*100}%"></i></span>`);}).join('')
+    :'<p class="dEmpty">Nog geen populariteit binnen.</p>';
+
+  /* --- punten per miljoen --- */
+  const val=scored.map(x=>({...x,r:x.v/x.p.prijs})).sort((a,b)=>b.r-a.r||b.v-a.v).slice(0,6);
+  document.getElementById('dwValue').innerHTML=val.length?val.map((x,i)=>dRow(i+1,x.p,fmt1(x.v)+' pt',
+    `<b>${fmt1(x.r)}</b><small>pt per €1M</small>`)).join('')
+    :'<p class="dEmpty">Nog geen werkelijke punten binnen.</p>';
+
+  /* --- opstellingen --- */
+  document.getElementById('dwLineups').innerHTML=`<div class="lineups">${S.teams.map(t=>{
+    const sq=t.squad.map(byId).filter(Boolean),sp=sq.reduce((a,p)=>a+p.prijs,0);
+    const xp=sq.reduce((a,p)=>a+(xpOf(p)||0),0),ac=sq.reduce((a,p)=>a+(actualOf(p)||0),0);
+    const slots=sq.map(p=>shirt(p.club)).join('')+'<span class="emptyslot"></span>'.repeat(Math.max(0,11-sq.length));
+    return `<button class="lu" data-open="${esc(t.id)}">
+      <span class="lt"><b>${esc(t.naam)}</b><span>${t.form==='433'?'4-3-3':'4-4-2'} · ${sq.length}/11</span></span>
+      <span class="shirts">${slots}</span>
+      <span class="stats"><div><small>Budget</small><b>€${sp}</b></div><div><small>xP</small><b>${sq.length?fmt1(xp):'–'}</b></div>
+        <div><small>Echt</small><b>${sq.length?fmt1(ac):'–'}</b></div></span></button>`;}).join('')}</div>`;
+}
+document.getElementById('dwTopPos').addEventListener('click',e=>{
+  const b=e.target.closest('[data-p]');if(!b)return;DW.pos=b.dataset.p;renderDashboard();});
+document.getElementById('viewDash').addEventListener('click',e=>{
+  const g=e.target.closest('[data-goto]');if(g){nav(g.dataset.goto);return;}
+  const o=e.target.closest('[data-open]');
+  if(o){S.active=o.dataset.open;save();if(window.innerWidth<=1180)tab(false);nav('build');}
+});
 
 /* ---------- populariteit ---------- */
 function popFiltered(){
@@ -2352,6 +2620,9 @@ function nav(v){
   nbe.setAttribute('aria-pressed',v==='best');
   nbp.setAttribute('aria-pressed',v==='pop');
   nba.setAttribute('aria-pressed',v==='actual');
+  const lbl={dash:'Dashboard',build:'Team bouwen',xp:'Verwachte punten',best:'Beste opstellingen',pop:'Populariteit',actual:'Werkelijke punten'};
+  document.getElementById('tbTitle').textContent=lbl[v]||'Superteam';
+  closeMenu();window.scrollTo(0,0);
   if(v==='dash')renderDashboard();
   else if(v==='build')render();
   else if(v==='xp'){renderClubCards();renderXHead();renderXList();}
@@ -2359,6 +2630,14 @@ function nav(v){
   else if(v==='pop'){renderPop();renderPopClubs();}
   else{renderActList();renderHistory();}
 }
+const sideNav=document.getElementById('sideNav'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+function openMenu(){sideNav.classList.add('open');scrim.classList.add('on');document.body.classList.add('navOpen');
+  menuBtn.setAttribute('aria-expanded','true');}
+function closeMenu(){sideNav.classList.remove('open');scrim.classList.remove('on');document.body.classList.remove('navOpen');
+  menuBtn.setAttribute('aria-expanded','false');}
+menuBtn.onclick=()=>sideNav.classList.contains('open')?closeMenu():openMenu();
+scrim.onclick=closeMenu;
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 nd.onclick=()=>nav('dash');
 nb.onclick=()=>nav('build');nx.onclick=()=>nav('xp');nbe.onclick=()=>nav('best');nbp.onclick=()=>nav('pop');nba.onclick=()=>nav('actual');
 document.getElementById('bMk').addEventListener('click',e=>{
@@ -2381,8 +2660,18 @@ function fit(){const m=window.innerWidth<=1180;
   document.getElementById('panePool').hidden=m&&ts.getAttribute('aria-pressed')==='true';
   document.getElementById('paneSquad').hidden=m&&tp.getAttribute('aria-pressed')==='true';}
 addEventListener('resize',fit);
+let rsT=null;addEventListener('resize',()=>{clearTimeout(rsT);rsT=setTimeout(()=>{if(!document.getElementById('viewDash').hidden)renderDashboard();},200);});
 
 buildShirts(CLUBS);
+/* filters inklapbaar op mobiel */
+['panePool','viewPop','viewActual'].forEach(id=>{
+  const f=document.querySelector('#'+id+' .filters');if(!f)return;
+  f.classList.add('fx');
+  const b=document.createElement('button');b.className='btn fxBtn';b.type='button';b.setAttribute('aria-expanded','false');
+  b.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>Filters';
+  b.onclick=()=>{const o=f.classList.toggle('open');b.setAttribute('aria-expanded',o);};
+  f.querySelector('.row').appendChild(b);
+});
 document.getElementById('fClub').innerHTML=CLUBS.map(c=>
   `<button class="chip club" data-club="${esc(c)}" aria-pressed="false">${shirt(c)}${esc(c)}</button>`).join('');
 document.getElementById('fPos').innerHTML='KVMA'.split('').map(k=>

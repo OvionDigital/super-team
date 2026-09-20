@@ -118,8 +118,12 @@ async function main() {
   } else {
     console.log('Geen wijziging in eigen rang/punten, data.json history ongewijzigd.');
   }
-  data.updatedAt = new Date().toISOString();
-  await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
+  // Alleen schrijven als er echt iets veranderd is. Anders commit de workflow
+  // elke 5 minuten een nieuwe data.json (en bouwt GitHub Pages elke keer opnieuw).
+  if (teamsChanged) {
+    data.updatedAt = new Date().toISOString();
+    await fs.writeFile(DATA_FILE, JSON.stringify(data, null, 2));
+  }
 
   // --- state.json (tokens): alleen voor de volgende run, nooit committen ---
   await fs.writeFile(STATE_FILE, JSON.stringify({

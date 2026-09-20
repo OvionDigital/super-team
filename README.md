@@ -2,7 +2,7 @@
 
 Twee dingen in één repo:
 
-1. Een achtergrondje dat elke 30 minuten checkt of Superteam de standen
+1. Een achtergrondje dat elke 5 minuten checkt of Superteam de standen
    heeft bijgewerkt, je een pushmelding stuurt als dat zo is, en je eigen
    rang/punten automatisch bijhoudt.
 2. `index.html`: dezelfde teambouw-tool als altijd, maar leest voortaan
