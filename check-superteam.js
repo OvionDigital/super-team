@@ -80,12 +80,22 @@ async function main() {
   let prevState = {};
   try { prevState = JSON.parse(await fs.readFile(STATE_FILE, 'utf-8')); } catch { /* eerste run */ }
 
-  const refreshTokenIn = prevState.refreshToken || SUPERTEAM_REFRESH_TOKEN;
+  // Het secret gaat voor: als jij een nieuw token invult op GitHub, moet dat
+  // altijd gebruikt worden in plaats van een oud token dat nog in de cache zit.
+  const refreshTokenIn = SUPERTEAM_REFRESH_TOKEN || prevState.refreshToken;
   if (!refreshTokenIn) {
     throw new Error('Geen ververstoken beschikbaar: vul SUPERTEAM_REFRESH_TOKEN in als secret voor de eerste run.');
   }
 
-  const { sessionToken, refreshToken } = await refreshTokens(refreshTokenIn);
+  let sessionToken, refreshToken;
+  try {
+    ({ sessionToken, refreshToken } = await refreshTokens(refreshTokenIn));
+  } catch (err) {
+    // Token afgewezen: wis de cache-kopie, zodat de eerstvolgende run
+    // gegarandeerd weer bij het secret begint in plaats van bij dit dode token.
+    await fs.writeFile(STATE_FILE, JSON.stringify({}, null, 2));
+    throw err;
+  }
   const standings = await fetchStandings(sessionToken);
   const signature = summarize(standings);
 
