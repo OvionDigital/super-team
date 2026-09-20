@@ -25,9 +25,9 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: state.json
-          key: superteam-state-${{ github.run_id }}
+          key: superteam-state-v2-${{ github.run_id }}
           restore-keys: |
-            superteam-state-
+            superteam-state-v2-
 
       - name: Check Superteam
         env:
@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: state.json
-          key: superteam-state-${{ github.run_id }}
+          key: superteam-state-v2-${{ github.run_id }}
 
       - name: data.json publiceren
         run: |
