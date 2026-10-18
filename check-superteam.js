@@ -22,7 +22,7 @@
  */
 
 const EDITION_ID = 13;
-const ROUND = 6; // pas dit later aan zodra Superteam een nieuwe ronde opent
+const START_ROUND = 6; // ondergrens; de actuele ronde wordt elke run automatisch gezocht
 const STATE_FILE = 'state.json';   // gevoelig: tokens. Nooit committen, alleen via cache.
 const DATA_FILE = 'data.json';     // publiek: wordt door de site zelf ingelezen.
 
@@ -42,13 +42,32 @@ async function refreshTokens(refreshToken) {
   return data.models[0]; // { sessionToken, refreshToken }
 }
 
-async function fetchStandings(sessionToken) {
+async function fetchStandings(sessionToken, round) {
   const res = await fetch(
-    `https://api.super-team.nl/api/ranks/lineups/editions/${EDITION_ID}/totals/${ROUND}`,
+    `https://api.super-team.nl/api/ranks/lineups/editions/${EDITION_ID}/totals/${round}`,
     { headers: { 'Authorization': 'Bearer ' + sessionToken } }
   );
   if (!res.ok) throw new Error(`Standen ophalen mislukt (${res.status}): ${await res.text()}`);
   return res.json();
+}
+
+function totalScore(standings) {
+  return (standings.models || []).reduce((a, m) => a + (m.score || 0), 0);
+}
+
+// Zoekt vanaf de laatst bekende ronde de hoogste ronde die al punten heeft.
+// Totalen zijn cumulatief: een gespeelde ronde heeft een hogere som dan de vorige.
+async function findCurrentRound(sessionToken, fromRound) {
+  let round = fromRound;
+  let standings = await fetchStandings(sessionToken, round);
+  for (let next = round + 1; next <= round + 5; next++) {
+    let cand;
+    try { cand = await fetchStandings(sessionToken, next); } catch { break; }
+    if (!cand.models || !cand.models.length || totalScore(cand) <= totalScore(standings)) break;
+    round = next;
+    standings = cand;
+  }
+  return { round, standings };
 }
 
 function summarize(standings) {
@@ -96,7 +115,9 @@ async function main() {
     await fs.writeFile(STATE_FILE, JSON.stringify({}, null, 2));
     throw err;
   }
-  const standings = await fetchStandings(sessionToken);
+  const fromRound = Math.max(START_ROUND, prevState.round || 0);
+  const { round: ROUND, standings } = await findCurrentRound(sessionToken, fromRound);
+  console.log('Actuele ronde:', ROUND);
   const signature = summarize(standings);
 
   console.log('Huidige samenvatting:', signature, '| Vorige keer:', prevState.signature || '(nog geen)');
@@ -137,7 +158,7 @@ async function main() {
 
   // --- state.json (tokens): alleen voor de volgende run, nooit committen ---
   await fs.writeFile(STATE_FILE, JSON.stringify({
-    signature, sessionToken, refreshToken, checkedAt: new Date().toISOString()
+    signature, round: ROUND, sessionToken, refreshToken, checkedAt: new Date().toISOString()
   }, null, 2));
 }
 
