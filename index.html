@@ -2088,6 +2088,11 @@ function dRow(i,p,sub,valHtml){
 function fmtDate(iso){
   try{return new Date(iso).toLocaleString('nl-NL',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});}catch(e){return '';}
 }
+function histSorted(){
+  const h=(S.history||[]).filter(x=>x&&x.teams);
+  return h.some(x=>x.ronde)?h.filter(x=>x.ronde).sort((a,b)=>a.ronde-b.ronde):h.slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+}
+const histLabel=h=>h.ronde?'R'+h.ronde:(()=>{const d=new Date(h.date+'T12:00');return isNaN(d)?String(h.date||''):d.toLocaleDateString('nl-NL',{day:'numeric',month:'short'});})();
 function rankChart(hist){
   if(!hist.length)return '<p class="dEmpty">Nog geen stand opgehaald.</p>';
   const names=[...new Set(hist.flatMap(h=>h.teams.map(t=>t.naam||('Team '+t.lineupId))))];
@@ -2103,7 +2108,7 @@ function rankChart(hist){
     <text x="${pl-8}" y="${y(t)+4}" font-size="12" fill="var(--muted)" text-anchor="end">#${t}</text>`;});
   const step=Math.max(1,Math.ceil(hist.length/6));
   hist.forEach((h,i)=>{if(i%step===0||i===hist.length-1){
-    const d=new Date(h.date+'T12:00');const lab=isNaN(d)?h.date:d.toLocaleDateString('nl-NL',{day:'numeric',month:'short'});
+    const lab=histLabel(h)+(h.ronde&&h.final===false?'*':'');
     g+=`<text x="${x(i)}" y="${H-8}" font-size="12" fill="var(--muted)" text-anchor="middle">${esc(lab)}</text>`;}});
   names.forEach((nm,ni)=>{
     const pts=hist.map((h,i)=>{const t=h.teams.find(tt=>(tt.naam||('Team '+tt.lineupId))===nm);
@@ -2111,7 +2116,7 @@ function rankChart(hist){
     const col=colors[ni%colors.length];
     if(pts.length>1)g+=`<polyline points="${pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ')}" fill="none" stroke="${col}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>`;
     pts.forEach((p,k)=>{const lastPt=k===pts.length-1;
-      g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${lastPt?5:3.5}" fill="${lastPt?col:'var(--card)'}" stroke="${col}" stroke-width="2"><title>${esc(nm)}: #${esc(p[3].rank)} · ${esc(p[3].punten)} pt (${esc(p[2].date)})</title></circle>`;});
+      g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${lastPt?5:3.5}" fill="${lastPt?col:'var(--card)'}" stroke="${col}" stroke-width="2"><title>${esc(nm)}: #${esc(p[3].rank)} · ${esc(p[3].punten)} pt (${esc(p[2].ronde?'ronde '+p[2].ronde+(p[2].final===false?', loopt nog':''):p[2].date)})</title></circle>`;});
   });
   const legend=names.map((nm,ni)=>`<span style="display:inline-flex;align-items:center;gap:6px;margin-right:14px;font-size:13px;color:var(--muted)">
     <span style="width:10px;height:10px;border-radius:50%;background:${colors[ni%colors.length]}"></span>${esc(nm)}</span>`).join('');
@@ -2119,7 +2124,7 @@ function rankChart(hist){
 }
 function renderDashboard(){
   /* --- positie --- */
-  const hist=(S.history||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  const hist=histSorted();
   const last=hist[hist.length-1],prev=hist[hist.length-2];
   document.getElementById('dwFresh').textContent=S.dataUpdatedAt?'bijgewerkt '+fmtDate(S.dataUpdatedAt):(last?last.asOf:'');
   const T=document.getElementById('dwTeams');
@@ -2129,7 +2134,7 @@ function renderDashboard(){
       const pv=prev&&prev.teams.find(x=>x.lineupId===t.lineupId);
       let dl='';
       if(pv&&pv.rank&&t.rank){const d=pv.rank-t.rank;
-        dl=d>0?`<span class="delta up" title="Sinds vorige meting">▲ ${d}</span>`:d<0?`<span class="delta down" title="Sinds vorige meting">▼ ${-d}</span>`:`<span class="delta eq">=</span>`;}
+        dl=d>0?`<span class="delta up" title="Sinds vorige ronde">▲ ${d}</span>`:d<0?`<span class="delta down" title="Sinds vorige ronde">▼ ${-d}</span>`:`<span class="delta eq">=</span>`;}
       const top=tot&&t.rank?Math.max(1,Math.round(t.rank/tot*100)):null;
       return `<div class="hTeam"><span class="tn" title="${esc(t.naam)}">${esc(t.naam||'Team '+t.lineupId)}</span>
         <span class="rk">#${esc(t.rank??'–')}</span>
@@ -2372,7 +2377,7 @@ document.getElementById('actDlgSave').onclick=()=>{
   }catch(e){alert('Dit is geen geldige punten-JSON. Plak het bestandje precies zoals je het van Claude kreeg.');}
 };
 function renderHistory(){
-  const hist=(S.history||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  const hist=histSorted();
   const wrap=document.getElementById('histChart');
   if(!hist.length){wrap.innerHTML='<p class="empty">Nog geen stand geïmporteerd. Bij de volgende import komt hier het eerste punt te staan.</p>';return;}
   const names=[...new Set(hist.flatMap(h=>h.teams.map(t=>t.naam||('Team '+t.lineupId))))];
